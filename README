@@ -11,4 +11,11 @@ Scene03: While you do all above things and commit to repository! Use: " git rese
 git log   //see commit history
 git reflog   //see command history
 
+Creating and merging branch:
+git branch   //see branch
+git branch <name>  //create branch
+git checkout <name> //switch to branch <name>
+git checkout -b <name>  //create and switch branch
+git merge <name>   //merge a branch to current branch
+git branch -d <name>   //delete branch
 
