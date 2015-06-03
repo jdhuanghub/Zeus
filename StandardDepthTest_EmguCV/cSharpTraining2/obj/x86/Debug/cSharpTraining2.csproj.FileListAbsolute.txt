@@ -1,0 +1,12 @@
+D:\Documents\visual studio 2010\Projects\cSharpTraining2\cSharpTraining2\bin\Debug\opencv_core2410.dll
+D:\Documents\visual studio 2010\Projects\cSharpTraining2\cSharpTraining2\bin\Debug\opencv_highgui2410.dll
+D:\Documents\visual studio 2010\Projects\cSharpTraining2\cSharpTraining2\bin\Debug\opencv_imgproc2410.dll
+D:\Documents\visual studio 2010\Projects\cSharpTraining2\cSharpTraining2\bin\Debug\OpenNI.dll
+D:\Documents\visual studio 2010\Projects\cSharpTraining2\cSharpTraining2\bin\Debug\cSharpTraining2.exe
+D:\Documents\visual studio 2010\Projects\cSharpTraining2\cSharpTraining2\bin\Debug\cSharpTraining2.pdb
+D:\Documents\visual studio 2010\Projects\cSharpTraining2\cSharpTraining2\bin\Debug\Emgu.CV.dll
+D:\Documents\visual studio 2010\Projects\cSharpTraining2\cSharpTraining2\bin\Debug\Emgu.CV.UI.dll
+D:\Documents\visual studio 2010\Projects\cSharpTraining2\cSharpTraining2\bin\Debug\Emgu.Util.dll
+D:\Documents\visual studio 2010\Projects\cSharpTraining2\cSharpTraining2\obj\x86\Debug\cSharpTraining2.csprojResolveAssemblyReference.cache
+D:\Documents\visual studio 2010\Projects\cSharpTraining2\cSharpTraining2\obj\x86\Debug\cSharpTraining2.exe
+D:\Documents\visual studio 2010\Projects\cSharpTraining2\cSharpTraining2\obj\x86\Debug\cSharpTraining2.pdb

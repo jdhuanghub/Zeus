@@ -1,0 +1,7 @@
+<?xml version = "1.0"?>
+<DepthSensorTest>
+	<Param Distance = "0.6" ErrorRange = "0.005">
+		<!--Distance is shown in Meters, ErrorRange is also described in Meters.
+			Setting the value of standard test distance and its error range-->
+	</Param>
+</DepthSensorTest>
