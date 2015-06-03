@@ -1,0 +1,387 @@
+The system is: Windows - 6.1 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler:  
+Build flags: 
+Id flags: 
+
+The output was:
+0
+Microsoft(R) 生成引擎版本 4.0.30319.17929
+[Microsoft .NET Framework 版本 4.0.30319.18063]
+版权所有 (C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2015/6/3 14:17:20。
+节点 1 上的项目“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\3.2.2\CompilerIdC\CompilerIdC.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“Debug\”。
+InitializeBuildStatus:
+  正在创建“Debug\CompilerIdC.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /nologo /W0 /WX- /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\CompilerIdC.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\3.2.2\CompilerIdC\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
+  CompilerIdC.vcxproj -> D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\3.2.2\CompilerIdC\.\CompilerIdC.exe
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:".\CompilerIdC.exe;#1" /manifest Debug\CompilerIdC.exe.intermediate.manifest
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\cl.exe
+FinalizeBuildStatus:
+  正在删除文件“Debug\CompilerIdC.unsuccessfulbuild”。
+  正在对“Debug\CompilerIdC.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\3.2.2\CompilerIdC\CompilerIdC.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:01.81
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+
+The C compiler identification is MSVC, found in "D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/3.2.2/CompilerIdC/CompilerIdC.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler:  
+Build flags: 
+Id flags: 
+
+The output was:
+0
+Microsoft(R) 生成引擎版本 4.0.30319.17929
+[Microsoft .NET Framework 版本 4.0.30319.18063]
+版权所有 (C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2015/6/3 14:17:22。
+节点 1 上的项目“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\3.2.2\CompilerIdCXX\CompilerIdCXX.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“Debug\”。
+InitializeBuildStatus:
+  正在创建“Debug\CompilerIdCXX.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /nologo /W0 /WX- /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /errorReport:queue CMakeCXXCompilerId.cpp
+  CMakeCXXCompilerId.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\CompilerIdCXX.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\3.2.2\CompilerIdCXX\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X64 Debug\CMakeCXXCompilerId.obj
+  CompilerIdCXX.vcxproj -> D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\3.2.2\CompilerIdCXX\.\CompilerIdCXX.exe
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:".\CompilerIdCXX.exe;#1" /manifest Debug\CompilerIdCXX.exe.intermediate.manifest
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_CXX_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\cl.exe
+FinalizeBuildStatus:
+  正在删除文件“Debug\CompilerIdCXX.unsuccessfulbuild”。
+  正在对“Debug\CompilerIdCXX.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\3.2.2\CompilerIdCXX\CompilerIdCXX.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:00.43
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+
+The CXX compiler identification is MSVC, found in "D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/3.2.2/CompilerIdCXX/CompilerIdCXX.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTryCompileExec3849271032.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=10.0"
+Microsoft(R) 生成引擎版本 4.0.30319.17929
+[Microsoft .NET Framework 版本 4.0.30319.18063]
+版权所有 (C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2015/6/3 14:17:23。
+节点 1 上的项目“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\cmTryCompileExec3849271032.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTryCompileExec3849271032.dir\Debug\”。
+  正在创建目录“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\”。
+InitializeBuildStatus:
+  正在创建“cmTryCompileExec3849271032.dir\Debug\cmTryCompileExec3849271032.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec3849271032.dir\Debug\\" /Fd"cmTryCompileExec3849271032.dir\Debug\vc100.pdb" /Gd /TC /errorReport:queue testCCompiler.c
+  Microsoft (R) C/C++ Optimizing Compiler Version 16.00.40219.01 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec3849271032.dir\Debug\\" /Fd"cmTryCompileExec3849271032.dir\Debug\vc100.pdb" /Gd /TC /errorReport:queue testCCompiler.c
+  
+  testCCompiler.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec3849271032.dir\Debug\cmTryCompileExec3849271032.exe.embed.manifest.res" cmTryCompileExec3849271032.dir\Debug\cmTryCompileExec3849271032_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3849271032.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec3849271032.dir\Debug\cmTryCompileExec3849271032.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3849271032.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3849271032.lib" /MACHINE:X64 cmTryCompileExec3849271032.dir\Debug\cmTryCompileExec3849271032.exe.embed.manifest.res
+  cmTryCompileExec3849271032.dir\Debug\testCCompiler.obj  /machine:x64 /debug 
+  cmTryCompileExec3849271032.vcxproj -> D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3849271032.exe
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec3849271032.dir\Debug\cmTryCompileExec3849271032.exe.embed.manifest" /manifest cmTryCompileExec3849271032.dir\Debug\cmTryCompileExec3849271032.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec3849271032.dir\Debug\cmTryCompileExec3849271032.exe.embed.manifest.res" cmTryCompileExec3849271032.dir\Debug\cmTryCompileExec3849271032_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3849271032.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec3849271032.dir\Debug\cmTryCompileExec3849271032.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3849271032.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3849271032.lib" /MACHINE:X64 cmTryCompileExec3849271032.dir\Debug\cmTryCompileExec3849271032.exe.embed.manifest.res
+  cmTryCompileExec3849271032.dir\Debug\testCCompiler.obj  /machine:x64 /debug 
+  cmTryCompileExec3849271032.vcxproj -> D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3849271032.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTryCompileExec3849271032.dir\Debug\cmTryCompileExec3849271032.unsuccessfulbuild”。
+  正在对“cmTryCompileExec3849271032.dir\Debug\cmTryCompileExec3849271032.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\cmTryCompileExec3849271032.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:07.26
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTryCompileExec2308860946.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=10.0"
+Microsoft(R) 生成引擎版本 4.0.30319.17929
+[Microsoft .NET Framework 版本 4.0.30319.18063]
+版权所有 (C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2015/6/3 14:17:31。
+节点 1 上的项目“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\cmTryCompileExec2308860946.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTryCompileExec2308860946.dir\Debug\”。
+  正在创建目录“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\”。
+InitializeBuildStatus:
+  正在创建“cmTryCompileExec2308860946.dir\Debug\cmTryCompileExec2308860946.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec2308860946.dir\Debug\\" /Fd"cmTryCompileExec2308860946.dir\Debug\vc100.pdb" /Gd /TC /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCCompilerABI.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 16.00.40219.01 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec2308860946.dir\Debug\\" /Fd"cmTryCompileExec2308860946.dir\Debug\vc100.pdb" /Gd /TC /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCCompilerABI.c"
+  
+  CMakeCCompilerABI.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec2308860946.dir\Debug\cmTryCompileExec2308860946.exe.embed.manifest.res" cmTryCompileExec2308860946.dir\Debug\cmTryCompileExec2308860946_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2308860946.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec2308860946.dir\Debug\cmTryCompileExec2308860946.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2308860946.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2308860946.lib" /MACHINE:X64 cmTryCompileExec2308860946.dir\Debug\cmTryCompileExec2308860946.exe.embed.manifest.res
+  cmTryCompileExec2308860946.dir\Debug\CMakeCCompilerABI.obj  /machine:x64 /debug 
+  cmTryCompileExec2308860946.vcxproj -> D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2308860946.exe
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec2308860946.dir\Debug\cmTryCompileExec2308860946.exe.embed.manifest" /manifest cmTryCompileExec2308860946.dir\Debug\cmTryCompileExec2308860946.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec2308860946.dir\Debug\cmTryCompileExec2308860946.exe.embed.manifest.res" cmTryCompileExec2308860946.dir\Debug\cmTryCompileExec2308860946_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2308860946.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec2308860946.dir\Debug\cmTryCompileExec2308860946.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2308860946.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2308860946.lib" /MACHINE:X64 cmTryCompileExec2308860946.dir\Debug\cmTryCompileExec2308860946.exe.embed.manifest.res
+  cmTryCompileExec2308860946.dir\Debug\CMakeCCompilerABI.obj  /machine:x64 /debug 
+  cmTryCompileExec2308860946.vcxproj -> D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2308860946.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTryCompileExec2308860946.dir\Debug\cmTryCompileExec2308860946.unsuccessfulbuild”。
+  正在对“cmTryCompileExec2308860946.dir\Debug\cmTryCompileExec2308860946.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\cmTryCompileExec2308860946.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:00.84
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTryCompileExec37475328.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=10.0"
+Microsoft(R) 生成引擎版本 4.0.30319.17929
+[Microsoft .NET Framework 版本 4.0.30319.18063]
+版权所有 (C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2015/6/3 14:17:32。
+节点 1 上的项目“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\cmTryCompileExec37475328.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTryCompileExec37475328.dir\Debug\”。
+  正在创建目录“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\”。
+InitializeBuildStatus:
+  正在创建“cmTryCompileExec37475328.dir\Debug\cmTryCompileExec37475328.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec37475328.dir\Debug\\" /Fd"cmTryCompileExec37475328.dir\Debug\vc100.pdb" /Gd /TP /errorReport:queue testCXXCompiler.cxx
+  Microsoft (R) C/C++ Optimizing Compiler Version 16.00.40219.01 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec37475328.dir\Debug\\" /Fd"cmTryCompileExec37475328.dir\Debug\vc100.pdb" /Gd /TP /errorReport:queue testCXXCompiler.cxx
+  
+  testCXXCompiler.cxx
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec37475328.dir\Debug\cmTryCompileExec37475328.exe.embed.manifest.res" cmTryCompileExec37475328.dir\Debug\cmTryCompileExec37475328_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec37475328.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec37475328.dir\Debug\cmTryCompileExec37475328.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec37475328.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec37475328.lib" /MACHINE:X64 cmTryCompileExec37475328.dir\Debug\cmTryCompileExec37475328.exe.embed.manifest.res
+  cmTryCompileExec37475328.dir\Debug\testCXXCompiler.obj  /machine:x64 /debug 
+  cmTryCompileExec37475328.vcxproj -> D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec37475328.exe
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec37475328.dir\Debug\cmTryCompileExec37475328.exe.embed.manifest" /manifest cmTryCompileExec37475328.dir\Debug\cmTryCompileExec37475328.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec37475328.dir\Debug\cmTryCompileExec37475328.exe.embed.manifest.res" cmTryCompileExec37475328.dir\Debug\cmTryCompileExec37475328_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec37475328.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec37475328.dir\Debug\cmTryCompileExec37475328.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec37475328.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec37475328.lib" /MACHINE:X64 cmTryCompileExec37475328.dir\Debug\cmTryCompileExec37475328.exe.embed.manifest.res
+  cmTryCompileExec37475328.dir\Debug\testCXXCompiler.obj  /machine:x64 /debug 
+  cmTryCompileExec37475328.vcxproj -> D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec37475328.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTryCompileExec37475328.dir\Debug\cmTryCompileExec37475328.unsuccessfulbuild”。
+  正在对“cmTryCompileExec37475328.dir\Debug\cmTryCompileExec37475328.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\cmTryCompileExec37475328.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:00.87
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTryCompileExec2460715006.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=10.0"
+Microsoft(R) 生成引擎版本 4.0.30319.17929
+[Microsoft .NET Framework 版本 4.0.30319.18063]
+版权所有 (C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2015/6/3 14:17:33。
+节点 1 上的项目“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\cmTryCompileExec2460715006.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTryCompileExec2460715006.dir\Debug\”。
+  正在创建目录“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\”。
+InitializeBuildStatus:
+  正在创建“cmTryCompileExec2460715006.dir\Debug\cmTryCompileExec2460715006.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec2460715006.dir\Debug\\" /Fd"cmTryCompileExec2460715006.dir\Debug\vc100.pdb" /Gd /TP /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCXXCompilerABI.cpp"
+  Microsoft (R) C/C++ Optimizing Compiler Version 16.00.40219.01 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec2460715006.dir\Debug\\" /Fd"cmTryCompileExec2460715006.dir\Debug\vc100.pdb" /Gd /TP /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCXXCompilerABI.cpp"
+  
+  CMakeCXXCompilerABI.cpp
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec2460715006.dir\Debug\cmTryCompileExec2460715006.exe.embed.manifest.res" cmTryCompileExec2460715006.dir\Debug\cmTryCompileExec2460715006_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2460715006.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec2460715006.dir\Debug\cmTryCompileExec2460715006.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2460715006.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2460715006.lib" /MACHINE:X64 cmTryCompileExec2460715006.dir\Debug\cmTryCompileExec2460715006.exe.embed.manifest.res
+  cmTryCompileExec2460715006.dir\Debug\CMakeCXXCompilerABI.obj  /machine:x64 /debug 
+  cmTryCompileExec2460715006.vcxproj -> D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2460715006.exe
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec2460715006.dir\Debug\cmTryCompileExec2460715006.exe.embed.manifest" /manifest cmTryCompileExec2460715006.dir\Debug\cmTryCompileExec2460715006.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec2460715006.dir\Debug\cmTryCompileExec2460715006.exe.embed.manifest.res" cmTryCompileExec2460715006.dir\Debug\cmTryCompileExec2460715006_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2460715006.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec2460715006.dir\Debug\cmTryCompileExec2460715006.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2460715006.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2460715006.lib" /MACHINE:X64 cmTryCompileExec2460715006.dir\Debug\cmTryCompileExec2460715006.exe.embed.manifest.res
+  cmTryCompileExec2460715006.dir\Debug\CMakeCXXCompilerABI.obj  /machine:x64 /debug 
+  cmTryCompileExec2460715006.vcxproj -> D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2460715006.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTryCompileExec2460715006.dir\Debug\cmTryCompileExec2460715006.unsuccessfulbuild”。
+  正在对“cmTryCompileExec2460715006.dir\Debug\cmTryCompileExec2460715006.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\cmTryCompileExec2460715006.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:00.84
+
+
+
+
+Detecting CXX [] compiler features compiled with the following output:
+Change Dir: D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTryCompileExec834638435.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=10.0"
+Microsoft(R) 生成引擎版本 4.0.30319.17929
+[Microsoft .NET Framework 版本 4.0.30319.18063]
+版权所有 (C) Microsoft Corporation。保留所有权利。
+
+生成启动时间为 2015/6/3 14:17:34。
+节点 1 上的项目“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\cmTryCompileExec834638435.vcxproj”(默认目标)。
+PrepareForBuild:
+  正在创建目录“cmTryCompileExec834638435.dir\Debug\”。
+  正在创建目录“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\”。
+InitializeBuildStatus:
+  正在创建“cmTryCompileExec834638435.dir\Debug\cmTryCompileExec834638435.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec834638435.dir\Debug\\" /Fd"cmTryCompileExec834638435.dir\Debug\vc100.pdb" /Gd /TP /errorReport:queue ..\feature_tests.cxx
+  Microsoft (R) C/C++ Optimizing Compiler Version 16.00.40219.01 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec834638435.dir\Debug\\" /Fd"cmTryCompileExec834638435.dir\Debug\vc100.pdb" /Gd /TP /errorReport:queue ..\feature_tests.cxx
+  
+  feature_tests.cxx
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec834638435.dir\Debug\cmTryCompileExec834638435.exe.embed.manifest.res" cmTryCompileExec834638435.dir\Debug\cmTryCompileExec834638435_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec834638435.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec834638435.dir\Debug\cmTryCompileExec834638435.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec834638435.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec834638435.lib" /MACHINE:X64 cmTryCompileExec834638435.dir\Debug\cmTryCompileExec834638435.exe.embed.manifest.res
+  cmTryCompileExec834638435.dir\Debug\feature_tests.obj  /machine:x64 /debug 
+  cmTryCompileExec834638435.vcxproj -> D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec834638435.exe
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec834638435.dir\Debug\cmTryCompileExec834638435.exe.embed.manifest" /manifest cmTryCompileExec834638435.dir\Debug\cmTryCompileExec834638435.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec834638435.dir\Debug\cmTryCompileExec834638435.exe.embed.manifest.res" cmTryCompileExec834638435.dir\Debug\cmTryCompileExec834638435_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec834638435.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec834638435.dir\Debug\cmTryCompileExec834638435.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec834638435.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Documents/PointCloudLibrary/CreateRangeImage2/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec834638435.lib" /MACHINE:X64 cmTryCompileExec834638435.dir\Debug\cmTryCompileExec834638435.exe.embed.manifest.res
+  cmTryCompileExec834638435.dir\Debug\feature_tests.obj  /machine:x64 /debug 
+  cmTryCompileExec834638435.vcxproj -> D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec834638435.exe
+FinalizeBuildStatus:
+  正在删除文件“cmTryCompileExec834638435.dir\Debug\cmTryCompileExec834638435.unsuccessfulbuild”。
+  正在对“cmTryCompileExec834638435.dir\Debug\cmTryCompileExec834638435.lastbuildstate”执行 Touch 任务。
+已完成生成项目“D:\Documents\PointCloudLibrary\CreateRangeImage2\build\CMakeFiles\CMakeTmp\cmTryCompileExec834638435.vcxproj”(默认目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:00.82
+
+
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
