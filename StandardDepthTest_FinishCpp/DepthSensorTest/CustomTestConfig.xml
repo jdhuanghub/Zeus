@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<OpenNI2>
+	<DisplayResolution xRes = "640" yRes = "480" FPS = "30">
+		<!--MapOutputMode xRes = "320" yRes = "240" FPS = "30"-->
+			<!--Distance is shown in Meters, ErrorRange is also described in Meters.
+			Setting the value of standard test distance and its error range-->
+    </DisplayResolution>
+    <SensorPosition Distance = "1.2" ErrorRange = "0.02">
+    	<!--Position Distance = "0.6" ErrorRange = "0.005"-->
+			<!-- Uncomment to set requested mode
+			<MapOutputMode xRes="640" yRes="480" FPS="30"/--> 
+    </SensorPosition>
+</OpenNI2>

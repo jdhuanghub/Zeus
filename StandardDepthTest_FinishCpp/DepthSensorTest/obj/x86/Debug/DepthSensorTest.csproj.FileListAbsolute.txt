@@ -1,0 +1,8 @@
+D:\Documents\TempCode\github\DepthSensorTest\DepthSensorTest\bin\Debug\DepthSensorTest.exe
+D:\Documents\TempCode\github\DepthSensorTest\DepthSensorTest\bin\Debug\DepthSensorTest.pdb
+D:\Documents\TempCode\github\DepthSensorTest\DepthSensorTest\obj\x86\Debug\DepthSensorTest.csprojResolveAssemblyReference.cache
+D:\Documents\TempCode\github\DepthSensorTest\DepthSensorTest\obj\x86\Debug\DepthSensorTest.TestProgramWindow.resources
+D:\Documents\TempCode\github\DepthSensorTest\DepthSensorTest\obj\x86\Debug\DepthSensorTest.Properties.Resources.resources
+D:\Documents\TempCode\github\DepthSensorTest\DepthSensorTest\obj\x86\Debug\DepthSensorTest.csproj.GenerateResource.Cache
+D:\Documents\TempCode\github\DepthSensorTest\DepthSensorTest\obj\x86\Debug\DepthSensorTest.exe
+D:\Documents\TempCode\github\DepthSensorTest\DepthSensorTest\obj\x86\Debug\DepthSensorTest.pdb

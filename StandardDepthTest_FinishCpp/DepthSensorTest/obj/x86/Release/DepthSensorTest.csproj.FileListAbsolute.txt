@@ -1,0 +1,12 @@
+D:\Documents\visual studio 2010\Projects\DepthSensorTest\DepthSensorTest\bin\Release\DepthSensorTest.exe
+D:\Documents\visual studio 2010\Projects\DepthSensorTest\DepthSensorTest\bin\Release\DepthSensorTest.pdb
+D:\Documents\visual studio 2010\Projects\DepthSensorTest\DepthSensorTest\bin\Release\Emgu.CV.dll
+D:\Documents\visual studio 2010\Projects\DepthSensorTest\DepthSensorTest\bin\Release\Emgu.CV.UI.dll
+D:\Documents\visual studio 2010\Projects\DepthSensorTest\DepthSensorTest\bin\Release\Emgu.Util.dll
+D:\Documents\visual studio 2010\Projects\DepthSensorTest\DepthSensorTest\bin\Release\NiWrapper.Net.dll
+D:\Documents\visual studio 2010\Projects\DepthSensorTest\DepthSensorTest\obj\x86\Release\DepthSensorTest.csprojResolveAssemblyReference.cache
+D:\Documents\visual studio 2010\Projects\DepthSensorTest\DepthSensorTest\obj\x86\Release\DepthSensorTest.TestProgramWindow.resources
+D:\Documents\visual studio 2010\Projects\DepthSensorTest\DepthSensorTest\obj\x86\Release\DepthSensorTest.Properties.Resources.resources
+D:\Documents\visual studio 2010\Projects\DepthSensorTest\DepthSensorTest\obj\x86\Release\DepthSensorTest.csproj.GenerateResource.Cache
+D:\Documents\visual studio 2010\Projects\DepthSensorTest\DepthSensorTest\obj\x86\Release\DepthSensorTest.exe
+D:\Documents\visual studio 2010\Projects\DepthSensorTest\DepthSensorTest\obj\x86\Release\DepthSensorTest.pdb
