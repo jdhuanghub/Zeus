@@ -1,1 +1,14 @@
 Hello World! This is jdwong's repository.
+
+Git commands:
+"git add "  //add files to stage.
+"git commit"  //commit files to branch.
+
+Scene01: While accidently modified sth in working directory! Use: "git checkout --xxxx"  //xxxx is file name, undo a recent change of a file in working directory.
+Scene02: While accidently modified sth and add to stage area, Use: "git reset HEAD file"  //unstage a recent change from stage area.
+Scene03: While you do all above things and commit to repository! Use: " git reset --hard commmit_id"  //go back to previous version(commit_id) of file.
+
+git log   //see commit history
+git reflog   //see command history
+
+
