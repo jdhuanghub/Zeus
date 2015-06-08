@@ -5,6 +5,7 @@
 #include <SetupAPI.h>
 #include <strsafe.h>
 #include <malloc.h>
+#include <iostream>
 //User head files
 #include "DevUsbGUID.h"
 
@@ -14,13 +15,13 @@
 typedef struct _USB_Device_Detail
 {
 	//Create an array in order to save the device path
-	CHAR	DevPathIndex[20][256];//MAX_DEVICE_STR_LENGTH = 256, support maximum 10 devices
-}DevDetail;
+	TCHAR	DevPathIndex[10][256];//MAX_DEVICE_STR_LENGTH = 256, support maximum 10 devices
+}DevDetail, *DevDetailPtr;
 
 //********************************************************/
 //Functions declaration and definitions
 //********************************************************/
-BOOL GetUSBDevicePath()
+BOOL GetUSBDevicePath(DevDetailPtr DevPathPtr)
 {
 	const GUID*		pInterguid = &GUID_LCASS_OBDRVUSB;
 	HDEVINFO		devInfo = NULL;
@@ -57,7 +58,7 @@ BOOL GetUSBDevicePath()
 															  NULL, 0, 
 															  &RequiredSize, NULL);
 			pdevInterfaceDetailData = (PSP_DEVICE_INTERFACE_DETAIL_DATA)malloc(RequiredSize);
-			pdevInterfaceDetailData->cbSize = sizeof(SP_DEVICE_INTERFACE_DATA);
+			pdevInterfaceDetailData->cbSize = sizeof(SP_DEVICE_INTERFACE_DETAIL_DATA);
 
 			//Then get the path
 			searchingResult = SetupDiGetDeviceInterfaceDetail(devInfo, &devInterfaceData, 
@@ -69,7 +70,8 @@ BOOL GetUSBDevicePath()
 				printf("succeed! we had valid path\n");
 			}
 			//Save the path
-			StringCchCopy(DevPathIndex[devIndex][256],RequiredSize,pdevInterfaceDetailData->DevicePath);
+			DevPathPtr = &DevDetailStorage;
+			StringCchCopy(DevPathPtr->DevPathIndex[devIndex],RequiredSize,pdevInterfaceDetailData->DevicePath);
 			devIndex++;
 		}
 		else if (GetLastError() == ERROR_NO_MORE_ITEMS)
@@ -90,22 +92,26 @@ int main()
 {
 	BOOL  RetVal = FALSE;
 
-	RetVal = GetUSBDevicePath();
+	DevDetail		DevDetailStorage;
+	DevDetailPtr    DevPathPtr = &DevDetailStorage;
+	RetVal = GetUSBDevicePath(DevPathPtr);
 	
 	if (RetVal == FALSE)
 	{
 		printf("Get device path failed!\n");
 	}
 
-	printf("Press q to exit...... \n");
-	while (TRUE)
-	{
-		//0x51 stands for key "q",
-		//The highest bit tells if key is pressed. The lowest tells if key is toggled
-		if (GetKeyState(0x51) & 0x8000)
-		{
-			break;
-		}
-	}
+	printf("Press any key to exit...... \n");
+	int i = 0;
+	std::cin >> i;
+// 	while (TRUE)
+// 	{
+// 		//0x51 stands for key "q",
+// 		//The highest bit tells if key is pressed. The lowest tells if key is toggled
+// 		if (GetKeyState(0x51) & 0x8000)
+// 		{
+// 			break;
+// 		}
+// 	}
 	return 0;
 }
