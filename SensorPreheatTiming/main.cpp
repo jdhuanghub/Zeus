@@ -70,7 +70,6 @@ BOOL GetUSBDevicePath(DevDetailPtr DevPathPtr)
 				printf("succeed! we had valid path\n");
 			}
 			//Save the path
-			DevPathPtr = &DevDetailStorage;
 			StringCchCopy(DevPathPtr->DevPathIndex[devIndex],RequiredSize,pdevInterfaceDetailData->DevicePath);
 			devIndex++;
 		}
@@ -93,6 +92,7 @@ int main()
 	BOOL  RetVal = FALSE;
 
 	DevDetail		DevDetailStorage;
+	;
 	DevDetailPtr    DevPathPtr = &DevDetailStorage;
 	RetVal = GetUSBDevicePath(DevPathPtr);
 	
