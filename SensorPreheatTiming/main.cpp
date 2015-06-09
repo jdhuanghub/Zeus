@@ -15,7 +15,8 @@
 typedef struct _USB_Device_Detail
 {
 	//Create an array in order to save the device path
-	TCHAR	DevPathIndex[10][256];//MAX_DEVICE_STR_LENGTH = 256, support maximum 10 devices
+	TCHAR	DevPathArray[10][256];//MAX_DEVICE_STR_LENGTH = 256, support maximum 10 devices
+	INT		DeviceIndex;
 }DevDetail, *DevDetailPtr;
 
 //********************************************************/
@@ -40,16 +41,16 @@ BOOL GetUSBDevicePath(DevDetailPtr DevPathPtr)
 
 	//Searching the devices 
 	ULONG	RequiredSize = 0;
-	INT		devIndex = 0;
 	BOOL	devsearch = TRUE;
 	BOOL	searchingResult = FALSE;
 
 	while(devsearch)
 	{
-		printf("searching devices......%d \n",devIndex);
+		//printf("searching devices......%d \n",DevPathPtr->DeviceIndex);
 		devInterfaceData.cbSize = sizeof(SP_DEVICE_INTERFACE_DATA);
 		searchingResult = SetupDiEnumDeviceInterfaces(devInfo, NULL, pInterguid, 
-													  devIndex, &devInterfaceData);
+													  DevPathPtr->DeviceIndex, 
+													  &devInterfaceData);
 		if (searchingResult == TRUE)
 		{
 			//First to get the size
@@ -67,41 +68,84 @@ BOOL GetUSBDevicePath(DevDetailPtr DevPathPtr)
 															  &RequiredSize, NULL);
 			if ((searchingResult == TRUE) | (GetLastError() != ERROR_NO_MORE_ITEMS))
 			{
-				printf("succeed! we had valid path\n");
+				//printf("succeed! we had valid path\n");
 			}
 			//Save the path
-			StringCchCopy(DevPathPtr->DevPathIndex[devIndex],RequiredSize,pdevInterfaceDetailData->DevicePath);
-			devIndex++;
+			StringCchCopy(DevPathPtr->DevPathArray[DevPathPtr->DeviceIndex],RequiredSize,
+						  pdevInterfaceDetailData->DevicePath);
+			DevPathPtr->DeviceIndex++;
 		}
 		else if (GetLastError() == ERROR_NO_MORE_ITEMS)
 		{
 			devsearch = FALSE;
-			printf("Failed,Reach the end, No more items \n");
+			//printf("Failed,Reach the end, No more items \n");
 			break;
 		}
 	}
 	return searchingResult;
 }
 
+BOOL DeviceInquiryLoop(DevDetailPtr DevPathPtr)
+{
+	BOOL	CheckConnection = TRUE;
+	void*	devHandle;
+	INT		InquiryTimes = 0;
+	while(InquiryTimes < DevPathPtr->DeviceIndex)
+	{
+		devHandle = CreateFile(DevPathPtr->DevPathArray[InquiryTimes], 
+			GENERIC_READ | GENERIC_WRITE, 
+			FILE_SHARE_READ | FILE_SHARE_WRITE, 
+			NULL, 
+			OPEN_EXISTING, 
+			FILE_FLAG_OVERLAPPED,
+			NULL);
+		if (devHandle == INVALID_HANDLE_VALUE)
+		{
+			printf("Connection lost! PortNumber: %d Error code : %x \n",DevPathPtr->DeviceIndex - 1 ,HRESULT_FROM_WIN32(GetLastError()));
+			CheckConnection = FALSE;
+			//break;
+		}
+		InquiryTimes++;
+	}
+	return CheckConnection;
+}
+
 //********************************************************/
-//Functions declaration and definitions
+//     MAIN
 //********************************************************/
 
 int main()
 {
 	BOOL  RetVal = FALSE;
-
+	const INT	  INQUIRY_INTERVALS = 1000;//Milliseconds
 	DevDetail		DevDetailStorage;
-	;
 	DevDetailPtr    DevPathPtr = &DevDetailStorage;
-	RetVal = GetUSBDevicePath(DevPathPtr);
-	
-	if (RetVal == FALSE)
-	{
-		printf("Get device path failed!\n");
-	}
 
-	printf("Press any key to exit...... \n");
+	while (!(GetKeyState(0x51) & 0x8000))
+	{
+		DevDetailStorage.DeviceIndex = 0;//Fixed value for start of device searching 
+		RetVal = GetUSBDevicePath(DevPathPtr);
+		printf("Number of devices detected : %d \n",DevPathPtr->DeviceIndex);
+		RetVal = DeviceInquiryLoop(DevPathPtr);
+		//True if all devices inquiries success
+		if (RetVal == TRUE)
+		{
+
+		}
+		Sleep(INQUIRY_INTERVALS);
+		//press q to exit
+		//0x51 stands for key "q"
+	}
+	printf("program exit...... \n");
+	
+
+
+// 	if (RetVal == FALSE)
+// 	{
+// 		printf("Get device path failed!\n");
+// 	}
+
+//	printf("Press any key to exit...... \n");
 	int i = 0;
 	std::cin >> i;
 // 	while (TRUE)
