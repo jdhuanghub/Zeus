@@ -7,8 +7,9 @@
 //Function declaration
 //********************************************************/
 BOOL DevPathSearching(DevDetailPtr pDeviceDetailData);
-BOOL DeviceConnectInquiry(DevDetailPtr pDeviceDetailData, INT DevIndex);
-
+BOOL DeviceConnectInquiry(INT &PreviousDevCount,INT &CurrentDevCount);
+BOOL DevicePathValidate(DevDetailPtr pDeviceDetailData, INT DevIndex);
+BOOL DevicePathIDParsing(DevDetailPtr pDeviceDetailData, INT DevIndex);
 //********************************************************/
 //     MAIN
 //********************************************************/
@@ -20,47 +21,44 @@ int main()
 	DevDetail		DevDetailStorage;
 	DevDetailPtr    DevPathPtr = &DevDetailStorage;
 
+	//For the start, find all the devices and their paths
 	RetVal = DevPathSearching(DevPathPtr);
 	printf("Number of devices detected : %d \n",DevPathPtr->DeviceIndex + 1);//usb interface start from 0;
 	
-	//press q to exit
-	//0x51 stands for key "q"
-	INT	SearchLoopIndex = 0;
-	while (!(GetKeyState(0x51) & 0x8000))
+	//start the time counting loop and check the connection status
+	INT		LoopCounter = 0/*[10] = {}*/;//loop timing counter....supporting 10devices.
+	while (!(GetKeyState(0x51) & 0x8000))//press q to exit,0x51 stands for key "q"
 	{
-		if (SearchLoopIndex > DevPathPtr->DeviceIndex)
+		//See if there are new devices connecting
+		INT		CurrentDevCount;
+		RetVal = DeviceConnectInquiry(DevPathPtr->DeviceIndex,CurrentDevCount);//Return TRUE if new device come
+		if (RetVal == TRUE)
 		{
-			SearchLoopIndex = 0;
+			DevPathSearching(DevPathPtr);
+			printf("%d new device plug in.\n",CurrentDevCount - DevPathPtr->DeviceIndex);
 		}
-		RetVal = DeviceConnectInquiry(DevPathPtr,SearchLoopIndex);
-		//True if all devices inquiries success
-		if (RetVal == FALSE)
+		//Check if a device is disconnect
+		for (int i = 0; i <= DevPathPtr->DeviceIndex; i++)
 		{
-			printf("%d connection lost"/*method to count lost connection*/);
+			RetVal = DevicePathValidate(DevPathPtr, i);
+			if (RetVal == FALSE)
+			{
+				//print the unique port ID
+				DevicePathIDParsing(DevPathPtr,i);
+			}
 		}
-		SearchLoopIndex++;
+		LoopCounter++;
+		//1 minutes time reached.
+		if (LoopCounter >= 60)//1 seconds per loop, 60 is set to 1 minute
+		{
+			LoopCounter = 0;
+			printf("preset time reached, reseting timer\n");
+		}
+		//system sleep for particular intervals, 1seconds here.
 		Sleep(INQUIRY_INTERVALS);
 	}
 	printf("program exit...... \n");
-	
-
-
-// 	if (RetVal == FALSE)
-// 	{
-// 		printf("Get device path failed!\n");
-// 	}
-
-//	printf("Press any key to exit...... \n");
 	int i = 0;
 	std::cin >> i;
-// 	while (TRUE)
-// 	{
-// 		//0x51 stands for key "q",
-// 		//The highest bit tells if key is pressed. The lowest tells if key is toggled
-// 		if (GetKeyState(0x51) & 0x8000)
-// 		{
-// 			break;
-// 		}
-// 	}
 	return 0;
 }
