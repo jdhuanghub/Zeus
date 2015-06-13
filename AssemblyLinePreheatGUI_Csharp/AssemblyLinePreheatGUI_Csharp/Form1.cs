@@ -18,7 +18,7 @@ namespace AssemblyLinePreheatGUI_Csharp
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            FunctionClass.DevPathSearching();
+            //FunctionClass.DevPathSearching();
         }
 
     }
