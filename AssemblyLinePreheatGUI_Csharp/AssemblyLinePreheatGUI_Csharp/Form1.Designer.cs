@@ -38,49 +38,50 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.StartButton = new System.Windows.Forms.Button();
+            this.Startbtn = new System.Windows.Forms.Button();
+            this.Exitbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(140, 12);
+            this.progressBar1.Location = new System.Drawing.Point(140, 13);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(176, 22);
+            this.progressBar1.Size = new System.Drawing.Size(176, 24);
             this.progressBar1.TabIndex = 0;
             // 
             // progressBar2
             // 
-            this.progressBar2.Location = new System.Drawing.Point(140, 62);
+            this.progressBar2.Location = new System.Drawing.Point(140, 67);
             this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(176, 22);
+            this.progressBar2.Size = new System.Drawing.Size(176, 24);
             this.progressBar2.TabIndex = 1;
             // 
             // progressBar3
             // 
-            this.progressBar3.Location = new System.Drawing.Point(140, 112);
+            this.progressBar3.Location = new System.Drawing.Point(140, 121);
             this.progressBar3.Name = "progressBar3";
-            this.progressBar3.Size = new System.Drawing.Size(176, 22);
+            this.progressBar3.Size = new System.Drawing.Size(176, 24);
             this.progressBar3.TabIndex = 2;
             // 
             // progressBar4
             // 
-            this.progressBar4.Location = new System.Drawing.Point(140, 162);
+            this.progressBar4.Location = new System.Drawing.Point(140, 176);
             this.progressBar4.Name = "progressBar4";
-            this.progressBar4.Size = new System.Drawing.Size(176, 22);
+            this.progressBar4.Size = new System.Drawing.Size(176, 24);
             this.progressBar4.TabIndex = 3;
             // 
             // progressBar5
             // 
-            this.progressBar5.Location = new System.Drawing.Point(140, 212);
+            this.progressBar5.Location = new System.Drawing.Point(140, 230);
             this.progressBar5.Name = "progressBar5";
-            this.progressBar5.Size = new System.Drawing.Size(176, 22);
+            this.progressBar5.Size = new System.Drawing.Size(176, 24);
             this.progressBar5.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(21, 20);
+            this.label1.Location = new System.Drawing.Point(21, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 14);
             this.label1.TabIndex = 5;
@@ -90,7 +91,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(21, 70);
+            this.label2.Location = new System.Drawing.Point(21, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 14);
             this.label2.TabIndex = 6;
@@ -100,7 +101,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(21, 120);
+            this.label3.Location = new System.Drawing.Point(21, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 14);
             this.label3.TabIndex = 7;
@@ -110,7 +111,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(21, 170);
+            this.label4.Location = new System.Drawing.Point(21, 184);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 14);
             this.label4.TabIndex = 8;
@@ -120,28 +121,39 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(21, 220);
+            this.label5.Location = new System.Drawing.Point(21, 238);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 14);
             this.label5.TabIndex = 9;
             this.label5.Text = "设备 4：";
             // 
-            // StartButton
+            // Startbtn
             // 
-            this.StartButton.Location = new System.Drawing.Point(385, 246);
-            this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(104, 37);
-            this.StartButton.TabIndex = 10;
-            this.StartButton.Text = "开始";
-            this.StartButton.UseVisualStyleBackColor = true;
-            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
+            this.Startbtn.Location = new System.Drawing.Point(385, 22);
+            this.Startbtn.Name = "Startbtn";
+            this.Startbtn.Size = new System.Drawing.Size(104, 40);
+            this.Startbtn.TabIndex = 10;
+            this.Startbtn.Text = "开始";
+            this.Startbtn.UseVisualStyleBackColor = true;
+            this.Startbtn.Click += new System.EventHandler(this.StartButton_Click);
+            // 
+            // Exitbtn
+            // 
+            this.Exitbtn.Location = new System.Drawing.Point(385, 212);
+            this.Exitbtn.Name = "Exitbtn";
+            this.Exitbtn.Size = new System.Drawing.Size(104, 40);
+            this.Exitbtn.TabIndex = 11;
+            this.Exitbtn.Text = "结束";
+            this.Exitbtn.UseVisualStyleBackColor = true;
+            this.Exitbtn.Click += new System.EventHandler(this.Exitbtn_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 295);
-            this.Controls.Add(this.StartButton);
+            this.ClientSize = new System.Drawing.Size(501, 320);
+            this.Controls.Add(this.Exitbtn);
+            this.Controls.Add(this.Startbtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -171,7 +183,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button StartButton;
+        private System.Windows.Forms.Button Startbtn;
+        private System.Windows.Forms.Button Exitbtn;
     }
 }
 
