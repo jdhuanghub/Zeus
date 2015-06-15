@@ -1,0 +1,10 @@
+D:\工作Files\Zeus-master\AssemblyLinePreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\obj\x86\Debug\AssemblyLinePreheatGUI_Csharp.Form1.resources
+D:\工作Files\Zeus-master\AssemblyLinePreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\obj\x86\Debug\AssemblyLinePreheatGUI_Csharp.Properties.Resources.resources
+D:\工作Files\Zeus-master\AssemblyLinePreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\obj\x86\Debug\AssemblyLinePreheatGUI_Csharp.csproj.GenerateResource.Cache
+D:\工作Files\Zeus-master\AssemblyLinePreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\bin\Debug\AssemblyLinePreheatGUI_Csharp.exe
+D:\工作Files\Zeus-master\AssemblyLinePreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\bin\Debug\AssemblyLinePreheatGUI_Csharp.pdb
+D:\工作Files\Zeus-master\AssemblyLinePreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\obj\x86\Debug\AssemblyLinePreheatGUI_Csharp.exe
+D:\工作Files\Zeus-master\AssemblyLinePreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\obj\x86\Debug\AssemblyLinePreheatGUI_Csharp.pdb
+D:\Documents\TempCode\Zeus-preheatGUI\AssemblyLinePreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\obj\x86\Debug\AssemblyLinePreheatGUI_Csharp.Form1.resources
+D:\Documents\TempCode\Zeus-preheatGUI\AssemblyLinePreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\obj\x86\Debug\AssemblyLinePreheatGUI_Csharp.Properties.Resources.resources
+D:\Documents\TempCode\Zeus-preheatGUI\AssemblyLinePreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\obj\x86\Debug\AssemblyLinePreheatGUI_Csharp.csproj.GenerateResource.Cache

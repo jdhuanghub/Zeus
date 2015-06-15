@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,7 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FunctionClass.cs" />
+    <Compile Include="CUSBDevices.cs" />
+    <Compile Include="CWin32.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
