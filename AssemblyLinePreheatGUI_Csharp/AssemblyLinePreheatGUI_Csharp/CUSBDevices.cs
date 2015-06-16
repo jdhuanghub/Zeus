@@ -26,6 +26,7 @@ namespace AssemblyLinePreheatGUI_Csharp
           {
               //do sth to show info message.
               //MessageBox.Show()
+              customDetailData.DevPathArray[0] = string.Empty;
               return false;
           }
          
@@ -141,6 +142,11 @@ namespace AssemblyLinePreheatGUI_Csharp
 
       public static bool DevicePathIDParsing(ref DevDetail customDetailData, uint DevIndex, ref string IDstring)
       {
+          if (string.IsNullOrEmpty(customDetailData.DevPathArray[0]))
+          {
+              IDstring = null;
+              return false;
+          }
           //Set the path string pass in function
           string InString = customDetailData.DevPathArray[DevIndex];
           //get rid of first "&"
@@ -153,6 +159,11 @@ namespace AssemblyLinePreheatGUI_Csharp
           IDstring = InStringSub.Substring(first, last - first - 2);
 
           return true;
+      }
+
+      public static void ProgressBarDisplay()
+      {
+          
       }
 
   }//Class DevFunction

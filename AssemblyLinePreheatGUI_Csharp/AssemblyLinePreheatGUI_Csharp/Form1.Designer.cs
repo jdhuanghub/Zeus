@@ -40,13 +40,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Startbtn = new System.Windows.Forms.Button();
             this.Exitbtn = new System.Windows.Forms.Button();
-            this.DetectedDeviceCount = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(140, 48);
-            this.progressBar1.MarqueeAnimationSpeed = 60;
             this.progressBar1.Maximum = 60;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(176, 22);
@@ -56,8 +55,10 @@
             // progressBar2
             // 
             this.progressBar2.Location = new System.Drawing.Point(140, 98);
+            this.progressBar2.Maximum = 60;
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.Size = new System.Drawing.Size(176, 22);
+            this.progressBar2.Step = 1;
             this.progressBar2.TabIndex = 1;
             // 
             // progressBar3
@@ -89,7 +90,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 14);
             this.label1.TabIndex = 5;
-            this.label1.Text = "设备 0：";
+            this.label1.Text = "端口 0：";
             // 
             // label2
             // 
@@ -99,7 +100,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 14);
             this.label2.TabIndex = 6;
-            this.label2.Text = "设备 1：";
+            this.label2.Text = "端口 1：";
             // 
             // label3
             // 
@@ -109,7 +110,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 14);
             this.label3.TabIndex = 7;
-            this.label3.Text = "设备 2：";
+            this.label3.Text = "端口 2：";
             // 
             // label4
             // 
@@ -119,7 +120,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 14);
             this.label4.TabIndex = 8;
-            this.label4.Text = "设备 3：";
+            this.label4.Text = "端口 3：";
             // 
             // label5
             // 
@@ -127,13 +128,13 @@
             this.label5.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label5.Location = new System.Drawing.Point(21, 256);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 14);
+            this.label5.Size = new System.Drawing.Size(56, 14);
             this.label5.TabIndex = 9;
-            this.label5.Text = "设备 4：";
+            this.label5.Text = "端口4：";
             // 
             // Startbtn
             // 
-            this.Startbtn.Location = new System.Drawing.Point(385, 20);
+            this.Startbtn.Location = new System.Drawing.Point(385, 46);
             this.Startbtn.Name = "Startbtn";
             this.Startbtn.Size = new System.Drawing.Size(104, 37);
             this.Startbtn.TabIndex = 10;
@@ -143,7 +144,7 @@
             // 
             // Exitbtn
             // 
-            this.Exitbtn.Location = new System.Drawing.Point(385, 196);
+            this.Exitbtn.Location = new System.Drawing.Point(385, 233);
             this.Exitbtn.Name = "Exitbtn";
             this.Exitbtn.Size = new System.Drawing.Size(104, 37);
             this.Exitbtn.TabIndex = 11;
@@ -151,22 +152,19 @@
             this.Exitbtn.UseVisualStyleBackColor = true;
             this.Exitbtn.Click += new System.EventHandler(this.Exitbtn_Click);
             // 
-            // DetectedDeviceCount
+            // backgroundWorker1
             // 
-            this.DetectedDeviceCount.AutoSize = true;
-            this.DetectedDeviceCount.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.DetectedDeviceCount.Location = new System.Drawing.Point(21, 9);
-            this.DetectedDeviceCount.Name = "DetectedDeviceCount";
-            this.DetectedDeviceCount.Size = new System.Drawing.Size(105, 14);
-            this.DetectedDeviceCount.TabIndex = 12;
-            this.DetectedDeviceCount.Text = "检测到设备数：";
+            this.backgroundWorker1.WorkerReportsProgress = true;
+            this.backgroundWorker1.WorkerSupportsCancellation = true;
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(backgroundWorker1_ProgressChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(501, 295);
-            this.Controls.Add(this.DetectedDeviceCount);
             this.Controls.Add(this.Exitbtn);
             this.Controls.Add(this.Startbtn);
             this.Controls.Add(this.label5);
@@ -179,8 +177,11 @@
             this.Controls.Add(this.progressBar3);
             this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.progressBar1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "预热处理";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,7 +201,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Startbtn;
         private System.Windows.Forms.Button Exitbtn;
-        private System.Windows.Forms.Label DetectedDeviceCount;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
