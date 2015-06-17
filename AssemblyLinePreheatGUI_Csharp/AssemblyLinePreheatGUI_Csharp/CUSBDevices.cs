@@ -161,10 +161,5 @@ namespace AssemblyLinePreheatGUI_Csharp
           return true;
       }
 
-      public static void ProgressBarDisplay()
-      {
-          
-      }
-
   }//Class DevFunction
 }//namespace
