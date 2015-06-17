@@ -12,3 +12,10 @@ D:\Documents\TempCode\Zeus-preheatGUI\AssemblyLinePreheatGUI_Csharp\AssemblyLine
 D:\Documents\TempCode\Zeus-preheatGUI\AssemblyLinePreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\obj\x86\Debug\AssemblyLinePreheatGUI_Csharp.csproj.GenerateResource.Cache
 D:\Documents\TempCode\Zeus-preheatGUI\AssemblyLinePreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\obj\x86\Debug\AssemblyLinePreheatGUI_Csharp.exe
 D:\Documents\TempCode\Zeus-preheatGUI\AssemblyLinePreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\obj\x86\Debug\AssemblyLinePreheatGUI_Csharp.pdb
+D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\bin\Debug\AssemblyLinePreheatGUI_Csharp.exe
+D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\bin\Debug\AssemblyLinePreheatGUI_Csharp.pdb
+D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\obj\x86\Debug\AssemblyLinePreheatGUI_Csharp.Form1.resources
+D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\obj\x86\Debug\AssemblyLinePreheatGUI_Csharp.Properties.Resources.resources
+D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\obj\x86\Debug\AssemblyLinePreheatGUI_Csharp.csproj.GenerateResource.Cache
+D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\obj\x86\Debug\AssemblyLinePreheatGUI_Csharp.exe
+D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp\obj\x86\Debug\AssemblyLinePreheatGUI_Csharp.pdb

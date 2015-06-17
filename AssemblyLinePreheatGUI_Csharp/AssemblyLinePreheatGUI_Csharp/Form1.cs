@@ -13,13 +13,23 @@ namespace AssemblyLinePreheatGUI_Csharp
 {
     public partial class Form1 : Form
     {
+        #region variables
+        private bool loopControl = false;
         private const int Inquiry_vals = 1000;
+        private int secondsToExecute = 0;
+
         private int prograeeBarCount1 = 0;
         private int prograeeBarCount2 = 0;
         private int prograeeBarCount3 = 0;
         private int prograeeBarCount4 = 0;
         private int prograeeBarCount5 = 0;
-        private bool loopControl = false;
+
+        private int percentComplete1 = 0;
+        private int percentComplete2 = 0;
+        private int percentComplete3 = 0;
+        private int percentComplete4 = 0;
+        private int percentComplete5 = 0;
+        #endregion//variables
 
         public Form1()
         {
@@ -35,11 +45,37 @@ namespace AssemblyLinePreheatGUI_Csharp
         //update the progress bar
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            this.progressBar1.Value = prograeeBarCount1;
-            this.progressBar2.Value = prograeeBarCount2;
-            this.progressBar3.Value = prograeeBarCount3;
-            this.progressBar4.Value = prograeeBarCount4;
-            this.progressBar5.Value = prograeeBarCount5;
+            this.progressBar1.Value = percentComplete1;
+            if (percentComplete1 != 0)
+            {
+                label1.Text = "端口 1：监控中";
+            }
+            else { label1.Text = "端口 1："; }
+            this.progressBar2.Value = percentComplete2;
+            if (percentComplete2 != 0)
+            {
+                label2.Text = "端口 2：监控中";
+            }
+            else { label2.Text = "端口 2："; }
+            this.progressBar3.Value = percentComplete3;
+            if (percentComplete3 != 0)
+            {
+                label3.Text = "端口 3：监控中";
+            }
+            else { label3.Text = "端口 3："; }
+            this.progressBar4.Value = percentComplete4;
+            if (percentComplete4 != 0)
+            {
+                label4.Text = "端口 4：监控中";
+            }
+            else { label4.Text = "端口 4："; }
+            this.progressBar5.Value = percentComplete5;
+            if (percentComplete5 != 0)
+            {
+                label5.Text = "端口 5：监控中";
+            }
+            else { label5.Text = "端口 5："; }
+            
         }
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
@@ -51,12 +87,23 @@ namespace AssemblyLinePreheatGUI_Csharp
             this.Startbtn.Enabled = false;
             this.Exitbtn.Enabled = true;
 
+            //Disable the updown control until the operation is done.
+            this.numericUpDown1.Enabled = false;
+            //Get the time value from the updown control
+            secondsToExecute = (int)numericUpDown1.Value;
+
             //reset the progress bar count to 0
             prograeeBarCount1 = 0;
             prograeeBarCount2 = 0;
             prograeeBarCount3 = 0;
             prograeeBarCount4 = 0;
             prograeeBarCount5 = 0;
+
+            percentComplete1 = 0;
+            percentComplete2 = 0;
+            percentComplete3 = 0;
+            percentComplete4 = 0;
+            percentComplete5 = 0;
 
             //Start the time consuming operation
             loopControl = true;
@@ -68,6 +115,7 @@ namespace AssemblyLinePreheatGUI_Csharp
         {
             loopControl = false;
             this.backgroundWorker1.CancelAsync();
+            this.numericUpDown1.Enabled = true;
             this.Startbtn.Enabled = true;
             MessageBox.Show("再次按下“开始”按钮之前，先将5个端口设备都连接上！", "提示：");
             //this.Close();
@@ -147,46 +195,47 @@ namespace AssemblyLinePreheatGUI_Csharp
 
                 #region Progressbar display
 
+                percentComplete1 = (int)((float)prograeeBarCount1 / (float)secondsToExecute * 100);
                 if (!string.IsNullOrEmpty(IDarray[0]))
                 {
-                    if (prograeeBarCount1 > 60)
-                    { prograeeBarCount1 = 60; }
+                    if (percentComplete1 == 100)
+                    { percentComplete1 = 100; }
                     else { prograeeBarCount1++; }
                 }else { prograeeBarCount1 = 0; }
-
+                percentComplete2 = (int)((float)prograeeBarCount2 / (float)secondsToExecute * 100);
                 if (!string.IsNullOrEmpty(IDarray[1]))
                 {
-                    if (prograeeBarCount2 > 60)
-                    { prograeeBarCount2 = 60; }
+                    if (percentComplete2 == 100)
+                    { percentComplete2 = 100; }
                     else { prograeeBarCount2++; }
                 }else { prograeeBarCount2 = 0; }
-
+                percentComplete3 = (int)((float)prograeeBarCount3 / (float)secondsToExecute * 100);
                 if (!string.IsNullOrEmpty(IDarray[2]))
                 {
-                    if (prograeeBarCount3 > 60)
-                    { prograeeBarCount3 = 60; }
+                    if (percentComplete3 == 100)
+                    { percentComplete3 = 100; }
                     else { prograeeBarCount3++; }
                 }else { prograeeBarCount3 = 0; }
-
+                percentComplete4 = (int)((float)prograeeBarCount4 / (float)secondsToExecute * 100);
                 if (!string.IsNullOrEmpty(IDarray[3]))
                 {
-                    if (prograeeBarCount4 > 60)
-                    { prograeeBarCount4 = 60; }
+                    if (percentComplete4 == 100)
+                    { percentComplete4 = 100; }
                     else { prograeeBarCount4++; }
                 }else { prograeeBarCount4 = 0; }
-
+                percentComplete5 = (int)((float)prograeeBarCount5 / (float)secondsToExecute * 100);
                 if (!string.IsNullOrEmpty(IDarray[4]))
                 {
-                    if (prograeeBarCount5 > 60)
-                    { prograeeBarCount5 = 60; }
+                    if (percentComplete5 == 100)
+                    { percentComplete5 = 100; }
                     else { prograeeBarCount5++; }
                 } else { prograeeBarCount5 = 0; }
 
-                timeWorker.ReportProgress(prograeeBarCount1);
-                timeWorker.ReportProgress(prograeeBarCount2);
-                timeWorker.ReportProgress(prograeeBarCount3);
-                timeWorker.ReportProgress(prograeeBarCount4);
-                timeWorker.ReportProgress(prograeeBarCount5);
+                timeWorker.ReportProgress(percentComplete1);
+                timeWorker.ReportProgress(percentComplete2);
+                timeWorker.ReportProgress(percentComplete3);
+                timeWorker.ReportProgress(percentComplete4);
+                timeWorker.ReportProgress(percentComplete5);
 
                 #endregion// Progress bar display
 
