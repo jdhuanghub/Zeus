@@ -36,6 +36,8 @@ namespace AssemblyLinePreheatGUI_Csharp
             InitializeComponent();
         }
 
+        #region backgroundWorker thread
+
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             BackgroundWorker timeWorker = sender as BackgroundWorker;
@@ -59,10 +61,9 @@ namespace AssemblyLinePreheatGUI_Csharp
             else { label2.Text = "端口 2："; }
             this.progressBar3.Value = percentComplete3;
             if (percentComplete3 != 0)
-            {
-                label3.Text = "端口 3：监控中";
-            }
-            else { label3.Text = "端口 3："; }
+            {label3.Text = "端口 3：监控中";}
+            else 
+            { label3.Text = "端口 3："; }
             this.progressBar4.Value = percentComplete4;
             if (percentComplete4 != 0)
             {
@@ -74,13 +75,18 @@ namespace AssemblyLinePreheatGUI_Csharp
             {
                 label5.Text = "端口 5：监控中";
             }
-            else { label5.Text = "端口 5："; }
+            else 
+            { label5.Text = "端口 5："; }
             
         }
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
 
         }
+
+        #endregion //backgroundWorker thread
+
+        #region button control
 
         private void StartButton_Click(object sender, EventArgs e)
         {
@@ -120,6 +126,7 @@ namespace AssemblyLinePreheatGUI_Csharp
             MessageBox.Show("再次按下“开始”按钮之前，先将5个端口设备都连接上！", "提示：");
             //this.Close();
         }
+        #endregion //button control
 
         private void PreHeatoperation(BackgroundWorker timeWorker)
         {
