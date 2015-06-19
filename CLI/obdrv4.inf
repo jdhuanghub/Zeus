@@ -1,0 +1,131 @@
+; ================= Version section ===================
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Orbbec
+ClassGuid={6bdd1fc6-810f-11d0-bec7-08002be2092f}
+Provider=%OB%
+DriverVer=10/21/2014,4.3.0.1
+CatalogFile=obdrv4.cat
+
+; ================= Class section =====================
+
+[ClassInstall32]
+Addreg=OrbbecClassReg     
+
+[OrbbecClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,"-20"
+
+; ================= Device section =====================
+
+[DestinationDirs]
+DefaultDestDir = 12 ; Driver Dir
+
+[Manufacturer]
+%MfgName%=Orbbec,NTx86,NTamd64
+
+[Orbbec.NTx86]
+%USB\VID_2BC5&PID_0400.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0400&MI_00
+%USB\VID_2BC5&PID_0400.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0400
+%USB\VID_2BC5&PID_0401.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0401&MI_00
+%USB\VID_2BC5&PID_0401.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0401
+%USB\VID_2BC5&PID_0402.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0402&MI_00
+%USB\VID_2BC5&PID_0402.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0402
+%USB\VID_2BC5&PID_0403.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0403&MI_00
+%USB\VID_2BC5&PID_0403.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0403
+%USB\VID_2BC5&PID_0404.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0404&MI_00
+%USB\VID_2BC5&PID_0404.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0404
+%USB\VID_2BC5&PID_0405.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0405&MI_00
+%USB\VID_2BC5&PID_0405.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0405
+
+[Orbbec.NTamd64]
+%USB\VID_2BC5&PID_0400.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0400&MI_00
+%USB\VID_2BC5&PID_0400.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0400
+%USB\VID_2BC5&PID_0401.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0401&MI_00
+%USB\VID_2BC5&PID_0401.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0401
+%USB\VID_2BC5&PID_0402.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0402&MI_00
+%USB\VID_2BC5&PID_0402.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0402
+%USB\VID_2BC5&PID_0403.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0403&MI_00
+%USB\VID_2BC5&PID_0403.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0403
+%USB\VID_2BC5&PID_0404.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0404&MI_00
+%USB\VID_2BC5&PID_0404.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0404
+%USB\VID_2BC5&PID_0405.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0405&MI_00
+%USB\VID_2BC5&PID_0405.DeviceDesc%=obdrv4.Dev, USB\VID_2BC5&PID_0405
+
+[obdrv4.Dev.NT]
+CopyFiles=obdrv4.Files.Ext
+
+[obdrv4.Dev.NT.Services]
+Addservice = obdrv4, 0x00000002, obdrv4.AddService
+
+[obdrv4.AddService]
+DisplayName    = %obdrv4.SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\obdrv4.sys
+AddReg         = obdrv4.AddReg
+LoadOrderGroup = Base
+
+[obdrv4.AddReg]
+HKR,"Parameters","MaximumTransferSize",0x10001,65536
+HKR,"Parameters","DebugLevel",0x10001,2
+HKR,"Parameters","RemovableIcon",0x10001,0
+
+[obdrv4.Files.Ext]
+obdrv4.sys
+
+[SourceDisksNames.x86]
+1=%Disk_Description%,,,\x86
+
+[SourceDisksNames.amd64]
+2=%Disk_Description%,,,\amd64
+
+[SourceDisksFiles.x86]
+obdrv4.sys = 1
+
+[SourceDisksFiles.amd64]
+obdrv4.sys = 2
+
+; ================= WDF section =====================
+
+[DestinationDirs]
+CoInstaller_CopyFiles = 11 ; System Dir
+
+[obdrv4.Dev.NT.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_CopyFiles]
+WdfCoInstaller01009.dll
+
+[SourceDisksFiles.x86]
+WdfCoInstaller01009.dll=1
+
+[SourceDisksFiles.amd64]
+WdfCoInstaller01009.dll=2
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01009.dll,WdfCoInstaller"
+
+[obdrv4.Dev.NT.Wdf]
+KmdfService = obdrv4, obdrv4_wdfsect
+
+[obdrv4_wdfsect]
+KmdfLibraryVersion = 1.9
+
+; ================= Strings section =====================
+
+[Strings]
+OB              = "Orbbec"
+MfgName         = "Orbbec Ltd."
+Disk_Description= "Orbbec Sensor Device Driver Installation Disk v4.x"
+obdrv4.SvcDesc =  "Orbbec Sensor Device Driver Service v4.x"
+ClassName       = "Orbbec"
+USB\VID_2BC5&PID_0400.DeviceDesc="ORBBEC Depth Sensor BootLoader"
+USB\VID_2BC5&PID_0401.DeviceDesc="ORBBEC Depth Sensor"
+USB\VID_2BC5&PID_0402.DeviceDesc="ORBBEC Close Depth Sensor"
+USB\VID_2BC5&PID_0403.DeviceDesc="ORBBEC Depth Sensor"
+USB\VID_2BC5&PID_0404.DeviceDesc="ORBBEC Depth Sensor"
+USB\VID_2BC5&PID_0405.DeviceDesc="ORBBEC Depth Sensor"
