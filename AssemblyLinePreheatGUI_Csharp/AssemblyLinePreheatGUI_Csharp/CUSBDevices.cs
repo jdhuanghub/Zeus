@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 
 namespace AssemblyLinePreheatGUI_Csharp
 {
-  public class DevFunction : CWin32
+    public class DevFunction : CWin32
   {
       //Device data structure
       [StructLayout(LayoutKind.Sequential, Pack = 1)]
@@ -159,6 +159,45 @@ namespace AssemblyLinePreheatGUI_Csharp
           IDstring = InStringSub.Substring(first, last - first - 2);
 
           return true;
+      }
+
+      public static void progressBarStatus(ProgressBarEx.ProgressBarEx probressBarObject, System.Windows.Forms.Label labelObject, int labelText, int percentComplete)
+      {
+          probressBarObject.Value = percentComplete;
+          if (percentComplete != 0)
+          {
+              labelObject.Text = "端口 " + labelText + ": 监控中";
+              if (percentComplete != 100)
+              {
+                  probressBarObject.ProgressColor = System.Drawing.Color.Red;
+              }
+              if (percentComplete == 100)
+              {
+                  probressBarObject.ProgressColor = System.Drawing.Color.Lime;
+              }
+          }
+          else { labelObject.Text = "端口 " + labelText + ": ";}
+      }
+
+      public static void progressSetValue(string IDarray,ref int workPercentage, ref int progressBarCountNum, int secondsToExecute)
+      {
+          workPercentage = (int)((float)progressBarCountNum / (float)secondsToExecute * 100);
+          if (!string.IsNullOrEmpty(IDarray))
+          {
+              if (workPercentage == 100)
+              {
+                  workPercentage = 100;
+              }
+              else 
+              { 
+                  progressBarCountNum++; 
+              }
+          }
+          else
+          {
+              progressBarCountNum = 0;
+          }
+          
       }
 
   }//Class DevFunction

@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Threading;
+using System.Configuration;
 
 namespace AssemblyLinePreheatGUI_Csharp
 {
@@ -17,6 +18,7 @@ namespace AssemblyLinePreheatGUI_Csharp
         private bool loopControl = false;
         private const int Inquiry_vals = 1000;
         private int secondsToExecute = 0;
+        private int totalDeviceCount = 0;
 
         private int prograeeBarCount1 = 0;
         private int prograeeBarCount2 = 0;
@@ -34,6 +36,7 @@ namespace AssemblyLinePreheatGUI_Csharp
         public Form1()
         {
             InitializeComponent();
+            programStart();
         }
 
         #region backgroundWorker thread
@@ -41,63 +44,39 @@ namespace AssemblyLinePreheatGUI_Csharp
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             BackgroundWorker timeWorker = sender as BackgroundWorker;
-            PreHeatoperation(timeWorker);
+            PreHeatoperation(ref totalDeviceCount ,timeWorker);
         }
 
         //update the progress bar
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            this.progressBar1.Value = percentComplete1;
-            if (percentComplete1 != 0)
-            {
-                label1.Text = "端口 1：监控中";
-            }
-            else { label1.Text = "端口 1："; }
-            this.progressBar2.Value = percentComplete2;
-            if (percentComplete2 != 0)
-            {
-                label2.Text = "端口 2：监控中";
-            }
-            else { label2.Text = "端口 2："; }
-            this.progressBar3.Value = percentComplete3;
-            if (percentComplete3 != 0)
-            {label3.Text = "端口 3：监控中";}
-            else 
-            { label3.Text = "端口 3："; }
-            this.progressBar4.Value = percentComplete4;
-            if (percentComplete4 != 0)
-            {
-                label4.Text = "端口 4：监控中";
-            }
-            else { label4.Text = "端口 4："; }
-            this.progressBar5.Value = percentComplete5;
-            if (percentComplete5 != 0)
-            {
-                label5.Text = "端口 5：监控中";
-            }
-            else 
-            { label5.Text = "端口 5："; }
-            
+            DevFunction.progressBarStatus(progressBar1, label1, 1, percentComplete1);
+
+            DevFunction.progressBarStatus(progressBar2, label2, 2, percentComplete2);
+
+            DevFunction.progressBarStatus(progressBar3, label3, 3, percentComplete3);
+
+            DevFunction.progressBarStatus(progressBar4, label4, 4, percentComplete4);
+
+            DevFunction.progressBarStatus(progressBar5, label5, 5, percentComplete5);
         }
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-
+            if (totalDeviceCount == 0)
+            {
+                rectangleShape1.FillColor = System.Drawing.Color.Red;
+            }
         }
 
         #endregion //backgroundWorker thread
 
         #region button control
 
-        private void StartButton_Click(object sender, EventArgs e)
+        private void programStart()
         {
-            this.Startbtn.Enabled = false;
-            this.Exitbtn.Enabled = true;
-
-            //Disable the updown control until the operation is done.
-            this.numericUpDown1.Enabled = false;
-            //Get the time value from the updown control
-            secondsToExecute = (int)numericUpDown1.Value;
-
+            //Get the time value from the app.config file
+            secondsToExecute = Int32.Parse(ConfigurationManager.AppSettings["SetTime"]);
+            label7.Text = "预热时间：" + secondsToExecute + "(秒)";
             //reset the progress bar count to 0
             prograeeBarCount1 = 0;
             prograeeBarCount2 = 0;
@@ -114,24 +93,20 @@ namespace AssemblyLinePreheatGUI_Csharp
             //Start the time consuming operation
             loopControl = true;
             backgroundWorker1.RunWorkerAsync(Inquiry_vals);
-
         }
 
-        private void Exitbtn_Click(object sender, EventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             loopControl = false;
             this.backgroundWorker1.CancelAsync();
-            this.numericUpDown1.Enabled = true;
-            this.Startbtn.Enabled = true;
-            MessageBox.Show("再次按下“开始”按钮之前，先将5个端口设备都连接上！", "提示：");
-            //this.Close();
+            MessageBox.Show("再次启动预热程序之前，先将对应端口设备都连接上！", "提示：");
         }
+
         #endregion //button control
 
-        private void PreHeatoperation(BackgroundWorker timeWorker)
+        private void PreHeatoperation(ref int devicesTotal, BackgroundWorker timeWorker)
         {
             //Orbbec Driver
-            //Class=Orbbec
             //ClassGuid={6bdd1fc6-810f-11d0-bec7-08002be2092f}
             //Guid GUID_CLASS_OBDRV_USB = new Guid(0x6bdd1fc6, 0x810f, 0x11d0, 0xbe, 0xc7, 0x08, 0x00, 0x2b, 0xe2, 0x09, 0x2f);
             //
@@ -150,7 +125,8 @@ namespace AssemblyLinePreheatGUI_Csharp
                 loopControl = false;
                 SensorData.DeviceIndex = 0;
                 IDarray[0] = string.Empty;
-                MessageBox.Show("未检测到设备！", "错误");
+                devicesTotal = 0;
+                //MessageBox.Show("未检测到设备！", "错误");
             }
             else
             {
@@ -158,7 +134,7 @@ namespace AssemblyLinePreheatGUI_Csharp
                 {
                     DevFunction.DevicePathIDParsing(ref SensorData, i, ref IDarray[i]);
                 }
-
+                devicesTotal = (int)SensorData.DeviceIndex;
             }
 
             while (loopControl)
@@ -202,48 +178,22 @@ namespace AssemblyLinePreheatGUI_Csharp
 
                 #region Progressbar display
 
-                percentComplete1 = (int)((float)prograeeBarCount1 / (float)secondsToExecute * 100);
-                if (!string.IsNullOrEmpty(IDarray[0]))
-                {
-                    if (percentComplete1 == 100)
-                    { percentComplete1 = 100; }
-                    else { prograeeBarCount1++; }
-                }else { prograeeBarCount1 = 0; }
-                percentComplete2 = (int)((float)prograeeBarCount2 / (float)secondsToExecute * 100);
-                if (!string.IsNullOrEmpty(IDarray[1]))
-                {
-                    if (percentComplete2 == 100)
-                    { percentComplete2 = 100; }
-                    else { prograeeBarCount2++; }
-                }else { prograeeBarCount2 = 0; }
-                percentComplete3 = (int)((float)prograeeBarCount3 / (float)secondsToExecute * 100);
-                if (!string.IsNullOrEmpty(IDarray[2]))
-                {
-                    if (percentComplete3 == 100)
-                    { percentComplete3 = 100; }
-                    else { prograeeBarCount3++; }
-                }else { prograeeBarCount3 = 0; }
-                percentComplete4 = (int)((float)prograeeBarCount4 / (float)secondsToExecute * 100);
-                if (!string.IsNullOrEmpty(IDarray[3]))
-                {
-                    if (percentComplete4 == 100)
-                    { percentComplete4 = 100; }
-                    else { prograeeBarCount4++; }
-                }else { prograeeBarCount4 = 0; }
-                percentComplete5 = (int)((float)prograeeBarCount5 / (float)secondsToExecute * 100);
-                if (!string.IsNullOrEmpty(IDarray[4]))
-                {
-                    if (percentComplete5 == 100)
-                    { percentComplete5 = 100; }
-                    else { prograeeBarCount5++; }
-                } else { prograeeBarCount5 = 0; }
+                DevFunction.progressSetValue(IDarray[0], ref percentComplete1, ref prograeeBarCount1, secondsToExecute);
 
+                DevFunction.progressSetValue(IDarray[1], ref percentComplete2, ref prograeeBarCount2, secondsToExecute);
+
+                DevFunction.progressSetValue(IDarray[2], ref percentComplete3, ref prograeeBarCount3, secondsToExecute);
+
+                DevFunction.progressSetValue(IDarray[3], ref percentComplete4, ref prograeeBarCount4, secondsToExecute);
+
+                DevFunction.progressSetValue(IDarray[4], ref percentComplete5, ref prograeeBarCount5, secondsToExecute);
+                
                 timeWorker.ReportProgress(percentComplete1);
                 timeWorker.ReportProgress(percentComplete2);
                 timeWorker.ReportProgress(percentComplete3);
                 timeWorker.ReportProgress(percentComplete4);
                 timeWorker.ReportProgress(percentComplete5);
-
+                
                 #endregion// Progress bar display
 
                 //system sleep for particular intervals, 1seconds here.

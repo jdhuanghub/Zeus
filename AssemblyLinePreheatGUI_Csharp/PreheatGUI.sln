@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyLinePreheatGUI_Csharp", "AssemblyLinePreheatGUI_Csharp\AssemblyLinePreheatGUI_Csharp.csproj", "{5FFDE027-0747-4193-925E-DBECCC8BE50B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreheatGUI", "AssemblyLinePreheatGUI_Csharp\PreheatGUI.csproj", "{5FFDE027-0747-4193-925E-DBECCC8BE50B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -29,59 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.progressBar3 = new System.Windows.Forms.ProgressBar();
-            this.progressBar4 = new System.Windows.Forms.ProgressBar();
-            this.progressBar5 = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.Startbtn = new System.Windows.Forms.Button();
-            this.Exitbtn = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.progressBar1 = new ProgressBarEx.ProgressBarEx();
+            this.progressBar2 = new ProgressBarEx.ProgressBarEx();
+            this.progressBar3 = new ProgressBarEx.ProgressBarEx();
+            this.progressBar4 = new ProgressBarEx.ProgressBarEx();
+            this.progressBar5 = new ProgressBarEx.ProgressBarEx();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(130, 46);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(176, 22);
-            this.progressBar1.TabIndex = 0;
-            // 
-            // progressBar2
-            // 
-            this.progressBar2.Location = new System.Drawing.Point(130, 95);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(176, 22);
-            this.progressBar2.TabIndex = 1;
-            // 
-            // progressBar3
-            // 
-            this.progressBar3.Location = new System.Drawing.Point(130, 145);
-            this.progressBar3.Name = "progressBar3";
-            this.progressBar3.Size = new System.Drawing.Size(176, 22);
-            this.progressBar3.TabIndex = 2;
-            // 
-            // progressBar4
-            // 
-            this.progressBar4.Location = new System.Drawing.Point(130, 195);
-            this.progressBar4.Name = "progressBar4";
-            this.progressBar4.Size = new System.Drawing.Size(176, 22);
-            this.progressBar4.TabIndex = 3;
-            // 
-            // progressBar5
-            // 
-            this.progressBar5.Location = new System.Drawing.Point(130, 245);
-            this.progressBar5.Name = "progressBar5";
-            this.progressBar5.Size = new System.Drawing.Size(176, 22);
-            this.progressBar5.TabIndex = 4;
             // 
             // label1
             // 
@@ -133,26 +97,6 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "端口 5：";
             // 
-            // Startbtn
-            // 
-            this.Startbtn.Location = new System.Drawing.Point(370, 145);
-            this.Startbtn.Name = "Startbtn";
-            this.Startbtn.Size = new System.Drawing.Size(104, 37);
-            this.Startbtn.TabIndex = 10;
-            this.Startbtn.Text = "开始";
-            this.Startbtn.UseVisualStyleBackColor = true;
-            this.Startbtn.Click += new System.EventHandler(this.StartButton_Click);
-            // 
-            // Exitbtn
-            // 
-            this.Exitbtn.Location = new System.Drawing.Point(370, 228);
-            this.Exitbtn.Name = "Exitbtn";
-            this.Exitbtn.Size = new System.Drawing.Size(104, 37);
-            this.Exitbtn.TabIndex = 11;
-            this.Exitbtn.Text = "结束";
-            this.Exitbtn.UseVisualStyleBackColor = true;
-            this.Exitbtn.Click += new System.EventHandler(this.Exitbtn_Click);
-            // 
             // backgroundWorker1
             // 
             this.backgroundWorker1.WorkerReportsProgress = true;
@@ -169,67 +113,123 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(337, 14);
             this.label6.TabIndex = 12;
-            this.label6.Text = "进度条满了之后，只需断开对应端口的设备即可。";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(370, 80);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(104, 21);
-            this.numericUpDown1.TabIndex = 13;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
+            this.label6.Text = "进度条为绿色时，只需断开对应端口的设备即可。";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(369, 51);
+            this.label7.Location = new System.Drawing.Point(354, 177);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 14);
+            this.label7.Size = new System.Drawing.Size(77, 14);
             this.label7.TabIndex = 14;
-            this.label7.Text = "预热时间(秒)：";
+            this.label7.Text = "预热时间：";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.BackColor = System.Drawing.Color.Transparent;
+            this.progressBar1.Image = null;
+            this.progressBar1.Location = new System.Drawing.Point(130, 51);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.ShowPercentage = true;
+            this.progressBar1.Size = new System.Drawing.Size(176, 23);
+            this.progressBar1.Text = "progressBar1";
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.BackColor = System.Drawing.Color.Transparent;
+            this.progressBar2.Image = null;
+            this.progressBar2.Location = new System.Drawing.Point(130, 101);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.ShowPercentage = true;
+            this.progressBar2.Size = new System.Drawing.Size(176, 23);
+            this.progressBar2.Text = "progressBar2";
+            // 
+            // progressBar3
+            // 
+            this.progressBar3.BackColor = System.Drawing.Color.Transparent;
+            this.progressBar3.Image = null;
+            this.progressBar3.Location = new System.Drawing.Point(130, 151);
+            this.progressBar3.Name = "progressBar3";
+            this.progressBar3.ShowPercentage = true;
+            this.progressBar3.Size = new System.Drawing.Size(176, 23);
+            this.progressBar3.Text = "progressBar3";
+            // 
+            // progressBar4
+            // 
+            this.progressBar4.BackColor = System.Drawing.Color.Transparent;
+            this.progressBar4.Image = null;
+            this.progressBar4.Location = new System.Drawing.Point(130, 201);
+            this.progressBar4.Name = "progressBar4";
+            this.progressBar4.ShowPercentage = true;
+            this.progressBar4.Size = new System.Drawing.Size(176, 23);
+            this.progressBar4.Text = "progressBar4";
+            // 
+            // progressBar5
+            // 
+            this.progressBar5.BackColor = System.Drawing.Color.Transparent;
+            this.progressBar5.Image = null;
+            this.progressBar5.Location = new System.Drawing.Point(130, 251);
+            this.progressBar5.Name = "progressBar5";
+            this.progressBar5.ShowPercentage = true;
+            this.progressBar5.Size = new System.Drawing.Size(176, 23);
+            this.progressBar5.Text = "progressBar5";
+            // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.rectangleShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(486, 295);
+            this.shapeContainer1.TabIndex = 21;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // rectangleShape1
+            // 
+            this.rectangleShape1.FillColor = System.Drawing.Color.LimeGreen;
+            this.rectangleShape1.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
+            this.rectangleShape1.Location = new System.Drawing.Point(383, 87);
+            this.rectangleShape1.Name = "rectangleShape1";
+            this.rectangleShape1.Size = new System.Drawing.Size(47, 16);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label8.Location = new System.Drawing.Point(363, 60);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(105, 14);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "端口连接状态：";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 295);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.Exitbtn);
-            this.Controls.Add(this.Startbtn);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(486, 295);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.progressBar5);
             this.Controls.Add(this.progressBar4);
             this.Controls.Add(this.progressBar3);
             this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "预热处理";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,22 +237,22 @@
 
         #endregion
 
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.ProgressBar progressBar2;
-        private System.Windows.Forms.ProgressBar progressBar3;
-        private System.Windows.Forms.ProgressBar progressBar4;
-        private System.Windows.Forms.ProgressBar progressBar5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button Startbtn;
-        private System.Windows.Forms.Button Exitbtn;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label7;
+        private ProgressBarEx.ProgressBarEx progressBar1;
+        private ProgressBarEx.ProgressBarEx progressBar2;
+        private ProgressBarEx.ProgressBarEx progressBar3;
+        private ProgressBarEx.ProgressBarEx progressBar4;
+        private ProgressBarEx.ProgressBarEx progressBar5;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private System.Windows.Forms.Label label8;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
     }
 }
 
