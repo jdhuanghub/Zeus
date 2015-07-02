@@ -42,9 +42,8 @@
             this.progressBar3 = new ProgressBarEx.ProgressBarEx();
             this.progressBar4 = new ProgressBarEx.ProgressBarEx();
             this.progressBar5 = new ProgressBarEx.ProgressBarEx();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.label8 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label1
@@ -175,25 +174,6 @@
             this.progressBar5.Size = new System.Drawing.Size(176, 23);
             this.progressBar5.Text = "progressBar5";
             // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.rectangleShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(486, 295);
-            this.shapeContainer1.TabIndex = 21;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // rectangleShape1
-            // 
-            this.rectangleShape1.FillColor = System.Drawing.Color.LimeGreen;
-            this.rectangleShape1.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
-            this.rectangleShape1.Location = new System.Drawing.Point(383, 87);
-            this.rectangleShape1.Name = "rectangleShape1";
-            this.rectangleShape1.Size = new System.Drawing.Size(47, 16);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -202,13 +182,22 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(105, 14);
             this.label8.TabIndex = 22;
-            this.label8.Text = "端口连接状态：";
+            this.label8.Text = "端口监控状态：";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Lime;
+            this.panel1.Location = new System.Drawing.Point(382, 97);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(49, 18);
+            this.panel1.TabIndex = 28;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(486, 295);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.progressBar5);
             this.Controls.Add(this.progressBar4);
@@ -222,7 +211,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -250,9 +238,8 @@
         private ProgressBarEx.ProgressBarEx progressBar3;
         private ProgressBarEx.ProgressBarEx progressBar4;
         private ProgressBarEx.ProgressBarEx progressBar5;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private System.Windows.Forms.Label label8;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

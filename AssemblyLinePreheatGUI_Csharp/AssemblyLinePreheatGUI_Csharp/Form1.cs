@@ -60,17 +60,16 @@ namespace AssemblyLinePreheatGUI_Csharp
 
             DevFunction.progressBarStatus(progressBar5, label5, 5, percentComplete5);
         }
+
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if (totalDeviceCount == 0)
             {
-                rectangleShape1.FillColor = System.Drawing.Color.Red;
+                panel1.BackColor = System.Drawing.Color.Red;
             }
         }
 
         #endregion //backgroundWorker thread
-
-        #region button control
 
         private void programStart()
         {
@@ -101,8 +100,6 @@ namespace AssemblyLinePreheatGUI_Csharp
             this.backgroundWorker1.CancelAsync();
             MessageBox.Show("再次启动预热程序之前，先将对应端口设备都连接上！", "提示：");
         }
-
-        #endregion //button control
 
         private void PreHeatoperation(ref int devicesTotal, BackgroundWorker timeWorker)
         {
@@ -136,9 +133,19 @@ namespace AssemblyLinePreheatGUI_Csharp
                 }
                 devicesTotal = (int)SensorData.DeviceIndex;
             }
-
+            
             while (loopControl)
             {
+                #region Turn on laser emitter
+
+                int laserInitialValue = 1;
+                for (uint i = 0; i <= SensorData.DeviceIndex;i++ )
+                {
+                    DevFunction.EnableLaser(ref SensorData, i, laserInitialValue);
+                }
+
+                #endregion
+
                 #region Checking devices
 
                 string DeviceUniqueID = null;

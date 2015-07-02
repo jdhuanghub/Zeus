@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Runtime.InteropServices;
 
 namespace AssemblyLinePreheatGUI_Csharp
@@ -31,7 +32,9 @@ namespace AssemblyLinePreheatGUI_Csharp
         #endregion Consts
 
         #region Structures
-
+        /// <summary>
+        /// 
+        /// </summary>
         [Flags]
         public enum DeviceFlags : int
         {
@@ -100,12 +103,33 @@ namespace AssemblyLinePreheatGUI_Csharp
             [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 256)]
             public string Name;
         }
+        /// <summary>
+        /// user defined structure for control transfer
+        /// </summary>
+        [StructLayout(LayoutKind.Sequential, Pack = 1)]
+        public struct PSUSBDRV_CONTROL_TRANSFER
+        {
+            public Byte cDirection;
+            public Byte cRequestType;
+            public Byte cRequest;
+            public Int16 nValue;
+            public Int16 nIndex;
+            public int nTimeout;
+        }
+
         #endregion
 
         #region Constants
         public const uint FILE_SHARE_READ = 0x00000001;    // file & pipe
         public const uint FILE_SHARE_WRITE = 0x00000002;    // file & pipe
         public const int ERROR_NO_MORE_ITEMS = 259;
+        /// <summary>
+        /// Device IO control code
+        /// </summary>
+        public const uint FILE_DEVICE_UNKNOWN = 0x00000022; 
+        public const uint IOCTL_INDEX = 0x0000;
+        public const uint METHOD_OUT_DIRECT = 2;
+        public const uint FILE_ANY_ACCESS = 0;
 
         /// <summary>WParam for above : A device was inserted</summary>
         public const int DEVICE_ARRIVAL = 0x8000;
@@ -242,6 +266,50 @@ namespace AssemblyLinePreheatGUI_Csharp
         /// <returns>True if successful.</returns>
         [DllImport("kernel32.dll", SetLastError = true)]
         internal static extern int CloseHandle(IntPtr hFile);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="hDevice"></param>
+        /// <param name="dwIoControlCode"></param>
+        /// <param name="InBuffer"></param>
+        /// <param name="nInBufferSize"></param>
+        /// <param name="OutBuffer"></param>
+        /// <param name="nOutBufferSize"></param>
+        /// <param name="pBytesReturned"></param>
+        /// <param name="lpOverlapped"></param>
+        /// <returns></returns>
+        [DllImport("Kernel32.dll", CharSet=CharSet.Auto, SetLastError=true)]
+        public static extern bool DeviceIoControl(
+           IntPtr hDevice,
+           uint dwIoControlCode,
+           Int16[] InBuffer,
+           Byte nInBufferSize,
+           Byte[] OutBuffer,
+           Byte nOutBufferSize,
+           ref int pBytesReturned,
+           IntPtr lpOverlapped);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="hDevice"></param>
+        /// <param name="dwIoControlCode"></param>
+        /// <param name="InBuffer"></param>
+        /// <param name="nInBufferSize"></param>
+        /// <param name="OutBuffer"></param>
+        /// <param name="nOutBufferSize"></param>
+        /// <param name="pBytesReturned"></param>
+        /// <param name="lpOverlapped"></param>
+        /// <returns></returns>
+        [DllImport("Kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        public static extern bool DeviceIoControl(
+           IntPtr hDevice,
+           uint dwIoControlCode,
+           Int16[] InBuffer,
+           Byte nInBufferSize,
+           ref Byte[] OutBuffer,
+           Byte nOutBufferSize,
+           ref int pBytesReturned,
+           IntPtr lpOverlapped);
         #endregion
 
         #region Public methods
@@ -283,5 +351,31 @@ namespace AssemblyLinePreheatGUI_Csharp
             }
         }
         #endregion
+
+        #region FunctionsList
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="DeviceType"></param>
+        /// <param name="Function"></param>
+        /// <param name="Method"></param>
+        /// <param name="Access"></param>
+        /// <returns></returns>
+        public static uint CTL_CODE(uint DeviceType, uint Function, uint Method, uint Access)
+        {
+            return ((DeviceType << 16) | (Access << 14) | (Function << 2) | Method);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        //public static uint IOCTL_PSDRV_CONTROL_TRANSFER = CTL_CODE(FILE_DEVICE_UNKNOWN, IOCTL_INDEX + 4, METHOD_OUT_DIRECT, FILE_ANY_ACCESS);
+        public static uint IOCTL_PSDRV_CONTROL_TRANSFER()
+        {
+            return CTL_CODE(FILE_DEVICE_UNKNOWN, IOCTL_INDEX + 4, METHOD_OUT_DIRECT, FILE_ANY_ACCESS);
+        }
+        
+        #endregion
+
     }//class close
 }
