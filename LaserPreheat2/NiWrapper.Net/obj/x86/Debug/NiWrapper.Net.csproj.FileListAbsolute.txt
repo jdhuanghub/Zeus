@@ -1,0 +1,13 @@
+D:\Documents\OpenNI_code\NiWrapper.Net-master\bin\x86_Debug\NiWrapper.Net - LICENSE.txt
+D:\Documents\OpenNI_code\NiWrapper.Net-master\bin\x86_Debug\NiWrapper.Net.dll
+D:\Documents\OpenNI_code\NiWrapper.Net-master\bin\x86_Debug\NiWrapper.Net.pdb
+D:\Documents\OpenNI_code\NiWrapper.Net-master\NiWrapper.Net\obj\x86\Debug\NiWrapper.Net.dll
+D:\Documents\OpenNI_code\NiWrapper.Net-master\NiWrapper.Net\obj\x86\Debug\NiWrapper.Net.pdb
+D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\bin\x86_Debug\NiWrapper.Net - LICENSE.txt
+D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\bin\x86_Debug\NiWrapper.Net.dll
+D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\bin\x86_Debug\NiWrapper.Net.pdb
+D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Debug\NiWrapper.Net - LICENSE.txt
+D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Debug\NiWrapper.Net.dll
+D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Debug\NiWrapper.Net.pdb
+D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\NiWrapper.Net\obj\x86\Debug\NiWrapper.Net.dll
+D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\NiWrapper.Net\obj\x86\Debug\NiWrapper.Net.pdb

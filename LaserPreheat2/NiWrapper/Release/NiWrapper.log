@@ -1,0 +1,69 @@
+﻿Build started 2015/7/9 19:42:07.
+     1>Project "D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\NiWrapper\NiWrapper.vcxproj" on node 2 (rebuild target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\NiWrapper.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"D:\Documents\OpenNI_code\OpenNI2-master\Include" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D NIWRAPPER_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Array.cpp CameraSettings.cpp Common.cpp CoordinateConverter.cpp Device.cpp DeviceInfo.cpp OpenNI.cpp OpenNI_Listener.cpp PlaybackControl.cpp Recorder.cpp SensorInfo.cpp VideoFrameRef.cpp VideoMode.cpp VideoStream.cpp VideoStream_Listener.cpp
+         Array.cpp
+         CameraSettings.cpp
+         Common.cpp
+         CoordinateConverter.cpp
+         Device.cpp
+         DeviceInfo.cpp
+         OpenNI.cpp
+         OpenNI_Listener.cpp
+         PlaybackControl.cpp
+         Recorder.cpp
+         SensorInfo.cpp
+         VideoFrameRef.cpp
+         VideoMode.cpp
+         VideoStream.cpp
+         VideoStream_Listener.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Release\NiWrapper.res" NiWrapper.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Release\NiWrapper.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:\Documents\OpenNI_code\OpenNI2-master\Bin\Win32-Release" OpenNI2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\NiWrapper.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Release\NiWrapper.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Release\NiWrapper.lib" /MACHINE:X86 /DLL Release\NiWrapper.res
+         Release\Array.obj
+         Release\CameraSettings.obj
+         Release\Common.obj
+         Release\CoordinateConverter.obj
+         Release\Device.obj
+         Release\DeviceInfo.obj
+         Release\OpenNI.obj
+         Release\OpenNI_Listener.obj
+         Release\PlaybackControl.obj
+         Release\Recorder.obj
+         Release\SensorInfo.obj
+         Release\VideoFrameRef.obj
+         Release\VideoMode.obj
+         Release\VideoStream.obj
+         Release\VideoStream_Listener.obj
+            Creating library D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Release\NiWrapper.lib and object D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Release\NiWrapper.exp
+         Generating code
+         Finished generating code
+         NiWrapper.vcxproj -> D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Release\NiWrapper.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Release\NiWrapper.dll;#2" /manifest Release\NiWrapper.dll.intermediate.manifest
+       _CopyOutOfDateSourceItemsToOutputDirectory:
+       Skipping target "_CopyOutOfDateSourceItemsToOutputDirectory" because all output files are up-to-date with respect to the input files.
+       PostBuildEvent:
+         xcopy "%OPENNI2_REDIST%*" "D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Release\" /y /s /e /i /d /exclude:CopyExcludelist.txt
+         :VCEnd
+         C:\Program Files (x86)\OpenNI2\Redist\OpenNI2\Drivers\Kinect.dll
+         C:\Program Files (x86)\OpenNI2\Redist\OpenNI2\Drivers\Kinect.pdb
+         C:\Program Files (x86)\OpenNI2\Redist\OpenNI2\Drivers\OniFile.dll
+         C:\Program Files (x86)\OpenNI2\Redist\OpenNI2\Drivers\OniFile.pdb
+         C:\Program Files (x86)\OpenNI2\Redist\OpenNI2\Drivers\PS1080.dll
+         C:\Program Files (x86)\OpenNI2\Redist\OpenNI2\Drivers\PS1080.pdb
+         C:\Program Files (x86)\OpenNI2\Redist\OpenNI2\Drivers\PSLink.dll
+         C:\Program Files (x86)\OpenNI2\Redist\OpenNI2\Drivers\PSLink.ini
+         C:\Program Files (x86)\OpenNI2\Redist\OpenNI2\Drivers\PSLink.pdb
+         复制了 9 个文件
+       FinalizeBuildStatus:
+         Deleting file "Release\NiWrapper.unsuccessfulbuild".
+         Touching "Release\NiWrapper.lastbuildstate".
+     1>Done Building Project "D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\NiWrapper\NiWrapper.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.30

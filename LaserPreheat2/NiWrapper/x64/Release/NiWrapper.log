@@ -1,0 +1,39 @@
+﻿Build started 2015/7/7 13:49:53.
+     1>Project "D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\NiWrapper\NiWrapper.vcxproj" on node 2 (rebuild target(s)).
+     1>InitializeBuildStatus:
+         Creating "x64\Release\NiWrapper.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D NIWRAPPER_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc100.pdb" /Gd /TP /errorReport:prompt Array.cpp CameraSettings.cpp Common.cpp CoordinateConverter.cpp Device.cpp DeviceInfo.cpp OpenNI.cpp OpenNI_Listener.cpp PlaybackControl.cpp Recorder.cpp SensorInfo.cpp VideoFrameRef.cpp VideoMode.cpp VideoStream.cpp VideoStream_Listener.cpp
+         Array.cpp
+         CameraSettings.cpp
+     1>CameraSettings.cpp(20): fatal error C1083: Cannot open include file: 'OpenNI.h': No such file or directory
+         Common.cpp
+         CoordinateConverter.cpp
+     1>CoordinateConverter.cpp(20): fatal error C1083: Cannot open include file: 'OpenNI.h': No such file or directory
+         Device.cpp
+     1>Device.cpp(20): fatal error C1083: Cannot open include file: 'OpenNI.h': No such file or directory
+         DeviceInfo.cpp
+     1>DeviceInfo.cpp(20): fatal error C1083: Cannot open include file: 'OpenNI.h': No such file or directory
+         OpenNI.cpp
+     1>OpenNI.cpp(20): fatal error C1083: Cannot open include file: 'OpenNI.h': No such file or directory
+         OpenNI_Listener.cpp
+     1>OpenNI_Listener.cpp(20): fatal error C1083: Cannot open include file: 'OpenNI.h': No such file or directory
+         PlaybackControl.cpp
+     1>PlaybackControl.cpp(20): fatal error C1083: Cannot open include file: 'OpenNI.h': No such file or directory
+         Recorder.cpp
+     1>Recorder.cpp(20): fatal error C1083: Cannot open include file: 'OpenNI.h': No such file or directory
+         SensorInfo.cpp
+     1>SensorInfo.cpp(20): fatal error C1083: Cannot open include file: 'OpenNI.h': No such file or directory
+         VideoFrameRef.cpp
+     1>VideoFrameRef.cpp(20): fatal error C1083: Cannot open include file: 'OpenNI.h': No such file or directory
+         VideoMode.cpp
+     1>VideoMode.cpp(20): fatal error C1083: Cannot open include file: 'OpenNI.h': No such file or directory
+         VideoStream.cpp
+     1>VideoStream.cpp(20): fatal error C1083: Cannot open include file: 'OpenNI.h': No such file or directory
+         VideoStream_Listener.cpp
+     1>VideoStream_Listener.cpp(20): fatal error C1083: Cannot open include file: 'OpenNI.h': No such file or directory
+     1>Done Building Project "D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\NiWrapper\NiWrapper.vcxproj" (rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.94

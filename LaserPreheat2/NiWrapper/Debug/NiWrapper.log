@@ -1,0 +1,82 @@
+﻿Build started 2015/7/8 16:44:39.
+     1>Project "D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\NiWrapper\NiWrapper.vcxproj" on node 2 (rebuild target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\NiWrapper.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"D:\Documents\OpenNI_code\OpenNI2-master\Include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D NIWRAPPER_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Array.cpp CameraSettings.cpp Common.cpp CoordinateConverter.cpp Device.cpp DeviceInfo.cpp OpenNI.cpp OpenNI_Listener.cpp PlaybackControl.cpp Recorder.cpp SensorInfo.cpp VideoFrameRef.cpp VideoMode.cpp VideoStream.cpp VideoStream_Listener.cpp
+         VideoStream_Listener.cpp
+         VideoStream.cpp
+         VideoMode.cpp
+         VideoFrameRef.cpp
+         SensorInfo.cpp
+         Recorder.cpp
+         PlaybackControl.cpp
+         OpenNI_Listener.cpp
+         OpenNI.cpp
+         DeviceInfo.cpp
+         Device.cpp
+         CoordinateConverter.cpp
+         Common.cpp
+         CameraSettings.cpp
+         Array.cpp
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\NiWrapper.res" NiWrapper.rc 
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\NiWrapper.dll.embed.manifest.res" Debug\NiWrapper_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Debug\NiWrapper.dll" /INCREMENTAL /NOLOGO /LIBPATH:"D:\Documents\OpenNI_code\OpenNI2-master\Bin\Win32-Release" OpenNI2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\NiWrapper.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Debug\NiWrapper.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Debug\NiWrapper.lib" /MACHINE:X86 /DLL Debug\NiWrapper.res
+         Debug\NiWrapper.dll.embed.manifest.res
+         Debug\Array.obj
+         Debug\CameraSettings.obj
+         Debug\Common.obj
+         Debug\CoordinateConverter.obj
+         Debug\Device.obj
+         Debug\DeviceInfo.obj
+         Debug\OpenNI.obj
+         Debug\OpenNI_Listener.obj
+         Debug\PlaybackControl.obj
+         Debug\Recorder.obj
+         Debug\SensorInfo.obj
+         Debug\VideoFrameRef.obj
+         Debug\VideoMode.obj
+         Debug\VideoStream.obj
+         Debug\VideoStream_Listener.obj
+            Creating library D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Debug\NiWrapper.lib and object D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Debug\NiWrapper.exp
+       Manifest:
+         Deleting file "Debug\NiWrapper.dll.embed.manifest".
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\NiWrapper.dll.embed.manifest" /manifest Debug\NiWrapper.dll.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\NiWrapper.dll.embed.manifest.res" Debug\NiWrapper_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Debug\NiWrapper.dll" /INCREMENTAL /NOLOGO /LIBPATH:"D:\Documents\OpenNI_code\OpenNI2-master\Bin\Win32-Release" OpenNI2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\NiWrapper.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Debug\NiWrapper.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Debug\NiWrapper.lib" /MACHINE:X86 /DLL Debug\NiWrapper.res
+         Debug\NiWrapper.dll.embed.manifest.res
+         Debug\Array.obj
+         Debug\CameraSettings.obj
+         Debug\Common.obj
+         Debug\CoordinateConverter.obj
+         Debug\Device.obj
+         Debug\DeviceInfo.obj
+         Debug\OpenNI.obj
+         Debug\OpenNI_Listener.obj
+         Debug\PlaybackControl.obj
+         Debug\Recorder.obj
+         Debug\SensorInfo.obj
+         Debug\VideoFrameRef.obj
+         Debug\VideoMode.obj
+         Debug\VideoStream.obj
+         Debug\VideoStream_Listener.obj
+         NiWrapper.vcxproj -> D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Debug\NiWrapper.dll
+       _CopyOutOfDateSourceItemsToOutputDirectory:
+       Skipping target "_CopyOutOfDateSourceItemsToOutputDirectory" because all output files are up-to-date with respect to the input files.
+       PostBuildEvent:
+         xcopy "%OPENNI2_REDIST%*" "D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\Bin\Win32-Debug\" /y /s /e /i /d /exclude:CopyExcludelist.txt
+         :VCEnd
+         复制了 0 个文件
+       FinalizeBuildStatus:
+         Deleting file "Debug\NiWrapper.unsuccessfulbuild".
+         Touching "Debug\NiWrapper.lastbuildstate".
+     1>Done Building Project "D:\Documents\visual studio 2010\Projects\PreheatGUI_Csharp\NiWrapper\NiWrapper.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.02
